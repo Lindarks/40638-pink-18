@@ -23,8 +23,11 @@
   background-color: @light-gray;
 }
 
-.photo-gallery__item:first-of-type .photo-gallery__image--daily-special {
-  margin-left: -20px;
+.photo-gallery__item--daily-special {
+  margin-left: 0;
+  margin-right: 0;
+
+  background-color: @white;
 }
 
 .photo-gallery__author {
@@ -39,6 +42,13 @@
   padding-right: 18px;
 }
 
+.photo-gallery__item--daily-special .photo-gallery__author {
+  margin-left: 20px;
+  margin-right: 20px;
+
+  background-color: @light-gray;
+}
+
 .photo-gallery__author span {
   font-size: 12px;
   line-height: 24px;
@@ -47,8 +57,17 @@
 }
 
 .photo-gallery__description {
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 18px;
   padding-right: 18px;
+}
+
+.photo-gallery__item--daily-special .photo-gallery__description {
+  margin-left: 20px;
+  margin-right: 20px;
+
+  background-color: @light-gray;
 }
 
 .photo-gallery__reaction {
@@ -56,5 +75,15 @@
 
   padding-left: 18px;
   padding-right: 18px;
+  padding-top: 23px;
   padding-bottom: 25px;
+}
+
+.photo-gallery__item--daily-special .photo-gallery__reaction {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  background-color: @light-gray;
 }
