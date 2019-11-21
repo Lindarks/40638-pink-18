@@ -65,12 +65,52 @@
   .feature__block {
     display: flex;
     flex-direction: column;
+    position: relative;
 
     text-align: center;
 
     width: 240px;
     .container();
     padding-top: 368px;
+  }
+
+  .first-block::before {
+    content: "";
+    position: absolute;
+    width: 292px;
+    height: 302px;
+
+    left: 0;
+    bottom: 300px;
+
+    background-image: url("../img/iphone-screen-1-desktop@1x.png");
+    background-repeat: no-repeat;
+  }
+
+  .second-block::before {
+    content: "";
+    position: absolute;
+    width: 292px;
+    height: 302px;
+
+    left: 0;
+    bottom: 300px;
+
+    background-image: url("../img/iphone-screen-2-desktop@1x.png");
+    background-repeat: no-repeat;
+  }
+
+  .third-block::before {
+    content: "";
+    position: absolute;
+    width: 292px;
+    height: 302px;
+
+    left: 0;
+    bottom: 300px;
+
+    background-image: url("../img/iphone-screen-3-desktop@1x.png");
+    background-repeat: no-repeat;
   }
 
   .feature__title {

@@ -1,17 +1,37 @@
 .social-copyright {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 284px;
+
+  padding-left: 75px;
+  padding-right: 75px;
 
   background-color: @white;
+}
+
+.social-copyright--visibility {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
   .social-copyright {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 127px;
+
+    .container();
   }
 }
 
 @media (min-width: @desktop-width) {
   .social-copyright {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 197px;
+
+    padding-left: 130px;
+    padding-right: 130px;
   }
 }
