@@ -1,8 +1,7 @@
 .feature {
   min-height: 800px;
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
+  .container();
   padding-top: 28px;
   padding-bottom: 36px;
 
@@ -11,20 +10,76 @@
   background-repeat: no-repeat;
 }
 
+.feature__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .feature__title {
-  font-size: 18px;
+  font-size: 18px; /*на планшетной ширине такие же характеристики шрифта*/
   line-height: 24px;
   font-weight: 700;
+  color: @black;
 
   margin: 0;
   padding-bottom: 25px;
 }
 
 .feature__description {
-  font-size: 14px;
+  font-size: 14px; /*на планшетной ширине такие же характеристики шрифта*/
   line-height: 24px;
   font-weight: 400;
 
   margin: 0;
   padding-bottom: 47px;
+}
+
+@media (min-width: @tablet-width) {
+  .feature {
+    min-height: 486px;
+    text-align: left;
+
+    background-image: url("../img/iphone-screen-3-tablet@1x.png");
+    background-position: 20px bottom;
+  }
+
+  .feature__wrapper {
+    padding-left: 300px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feature {
+    background-image: none; /*временно*/
+  }
+
+  .feature__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+
+  .feature__block {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    width: 240px;
+    .container();
+    padding-top: 368px;
+  }
+
+  .feature__title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .feature__description {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }

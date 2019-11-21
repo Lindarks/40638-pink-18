@@ -1,13 +1,27 @@
 .promo {
-  font-size: 24px;
-  font-weight: 300;
-  text-align: center;
-  color: @navy;
-
-  padding-left: 20px;
-  padding-right: 20px;
+  .container();
   padding-top: 28px;
   padding-bottom: 36px;
 
   background-color: @white;
+}
+
+.promo__description {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  color: @navy;
+}
+
+@media (min-width: @tablet-width) {
+  .promo__description {
+    font-size: 40px;
+    line-height: normal;
+  }
+
+  .promo__description:nth-of-type(2) {
+    padding-left: 145px;
+    padding-right: 145px;
+  }
 }

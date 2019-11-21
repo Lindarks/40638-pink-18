@@ -8,11 +8,13 @@
     </head>
     <body>
         <header class="page-header">
-          <div class="page-header__wrapper">
+          <div class="page-header__block">
+            <div class="page-header__wrapper">
               <a class="page-header__logo">
                 <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип приложения PINK">
               </a>
               <button class="page-header__menu-btn" type="button" aria-label="Закрыть меню"><img src="img/icon-menu-cross.svg" width="24" height="23"></button> <!-- Такая же кнопка была в Техномарте. Подсмотреть, чтобы вспомнить, как она делается-->
+            </div>
           </div>
           <nav class="main-nav">
             <!--<button class="main-nav__toggle" type="button" aria-label="Меню"><img src="img/icon-menu-burger.svg" width="50" height="24"></button>-->
@@ -38,13 +40,13 @@
         <main class="page-main">
           <section class="page-main__photo-gallery photo-gallery">
             <p class="photo-gallery__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+            <div class="photo-gallery__item photo-gallery__item--daily-special">
+              <img class="photo-gallery__image photo-gallery__image" src="img/panorama-mobile@1x.jpg" width="320" height="177" alt="Фото пользователя">
+              <cite class="photo-gallery__author">Анна <span>(5 минут назад)</span></cite>
+              <p class="photo-gallery__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              <b class="photo-gallery__reaction">Нравится: 215</b>
+            </div>
             <div class="photo-gallery__list">
-              <div class="photo-gallery__item photo-gallery__item--daily-special">
-                <img class="photo-gallery__image photo-gallery__image" src="img/panorama-mobile@1x.jpg" width="320" height="177" alt="Фото пользователя">
-                <cite class="photo-gallery__author">Анна <span>(5 минут назад)</span></cite>
-                <p class="photo-gallery__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-                <b class="photo-gallery__reaction">Нравится: 215</b>
-              </div>
               <div class="photo-gallery__item">
                 <img class="photo-gallery__image" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя">
                 <cite class="photo-gallery__author">Левон <span>(5 часов назад)</span></cite>

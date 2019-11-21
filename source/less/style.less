@@ -6,18 +6,20 @@
 @import "download.less";
 @import "promo.less";
 @import "feature.less";
+@import "research.less";
 @import "review.less";
 @import "slider.less";
 @import "photo-gallery.less";
 @import "photo-editor.less";
 @import "page-footer.less";
+@import "social-copyright.less";
 @import "social.less";
 @import "social-link.less";
 @import "contacts.less";
 @import "copyright.less";
 
 body {
-  width: 320px; /* Заменить на min-width, когда появятся другие разрешения */
+  min-width: 320px;
   margin: 0 auto;
   padding: 0;
 
@@ -25,12 +27,18 @@ body {
   font-size: 14px;
   line-height: 24px;
   color: @navy;
+  font-style: normal;
 
   background-color: @light-gray;
 }
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {

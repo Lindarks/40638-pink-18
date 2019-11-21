@@ -30,6 +30,11 @@
   background-color: @white;
 }
 
+.photo-gallery__image {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .photo-gallery__author {
   font-size: 14px;
   line-height: 24px;
@@ -71,9 +76,13 @@
 }
 
 .photo-gallery__reaction {
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: normal;
+  text-transform: uppercase;
   color: @pink;
 
-  padding-left: 18px;
+  padding-left: 50px;
   padding-right: 18px;
   padding-top: 23px;
   padding-bottom: 25px;
@@ -86,4 +95,25 @@
   margin-right: 20px;
 
   background-color: @light-gray;
+}
+
+@media (min-width: @tablet-width) {
+  .photo-gallery__title {
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  .photo-gallery__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .photo-gallery__item {
+    width: 300px;
+  }
+
+  .photo-gallery__item--daily-special {
+    width: auto;
+  }
 }
