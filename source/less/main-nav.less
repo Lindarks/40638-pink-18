@@ -11,12 +11,14 @@
 }
 
 .main-nav__top-block {
+  border-bottom: 1px solid @black;
+}
+
+.main-nav__top-block-container {
   display: flex;
   justify-content: space-between;
   width: 320px;
   margin: 0 auto;
-
-  border-bottom: 1px solid @black;
 }
 
 @media (min-width: @desktop-width) {
@@ -30,7 +32,7 @@
     margin: 0 auto;
   }
 
-  .main-nav__top-block {
+  .main-nav__top-block-container {
     width: 147px;
     margin-left: 130px;
     margin-top: 27px;

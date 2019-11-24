@@ -1,9 +1,24 @@
 .research {
   display: none;
-  .container;
   color: @black;
 
   background-color: @white;
+}
+
+.research__container {
+  .container();
+  padding-top: 28px;
+  padding-bottom: 36px;
+
+  min-height: 271px;
+}
+
+.research__wrapper {
+  padding-top: 18px;
+  padding-bottom: 16px;
+  padding-left: 300px;
+
+  min-height: 250px;
 }
 
 .research__title {
@@ -26,11 +41,9 @@
 
 @media (min-width: @tablet-width) {
   .research {
-    display: block;
+    display: flex;
     /*position: relative;*/
     min-height: 400px;
-    padding-left: 300px;
-    padding-top: 100px;
   }
   /*.research::before {
     content: "";
