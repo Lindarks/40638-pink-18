@@ -1,0 +1,68 @@
+.research {
+  display: none;
+  color: @black;
+
+  background-color: @white;
+}
+
+.research__container {
+  .container();
+  padding-top: 28px;
+  padding-bottom: 36px;
+
+  min-height: 271px;
+}
+
+.research__wrapper {
+  padding-top: 18px;
+  padding-bottom: 16px;
+  padding-left: 300px;
+
+  min-height: 250px;
+}
+
+.research__title {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  width: 170px;
+}
+
+.research__description {
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.research__link {
+  color: @pink;
+  border-bottom: 1px solid @pink;
+}
+
+@media (min-width: @tablet-width) {
+  .research {
+    display: flex;
+    /*position: relative;*/
+    min-height: 400px;
+  }
+  /*.research::before {
+    content: "";
+    position: absolute;
+    left: 50px;
+    top: 50px;
+
+    width: 239px;
+    height: 278px;
+
+    background-image: url("../img/icon-timer.svg");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+  }*/
+}
+
+@media (min-width: @desktop-width) {
+  .research {
+    display: block;
+    min-height: 480px;
+  }
+}

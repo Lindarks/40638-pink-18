@@ -1,6 +1,7 @@
 @white: #ffffff;
 @black: #000000;
 @navy: #283645;
+@dark-navy: #1d2631;
 @pink: #d22856;
 @light-gray: #f2f2f2;
 @gray: #e5e5e5;
@@ -8,9 +9,26 @@
 @green: #3dc644;
 @orange: #f25b26;
 
-@style-reset: {
+@tablet-width: 660px;
+@desktop-width: 1200px;
+
+.list-reset() {
   margin: 0;
   padding: 0;
 
   list-style: none;
+}
+
+.container() {
+  width: 87.5%;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    .container() {
+      width: 94%;
+      max-width: 940px;
+
+      margin: 0 auto;
+    }
+  }
 }

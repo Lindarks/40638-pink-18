@@ -1,44 +1,113 @@
 .page-header {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 462px;
+  min-height: 733px;
 
   background-color: @navy;
   background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-position: top center;
+  background-position: center 200px;
   background-repeat: no-repeat;
-}
-
-.page-header__wrapper {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 69px;
-
-  background-color: @navy;
-  border-bottom: 1px solid @black;
-}
-
-.page-header__logo {
-  padding-top: 22px;
-  padding-left: 20px;
-}
-
-.page-header__menu-btn {
-  width: 24px;
-  height: 23px;
-
-  margin-top: 21px;
-  margin-right: 19px;
 }
 
 .page-header__title {
   font-size: 24px;
   font-weight: 300;
-  line-height: 24px;
+  line-height: normal;
   text-align: center;
   color: @white;
+  margin: 0 auto;
+}
 
-  padding-left: 47px;
-  padding-right: 46px;
+.page-header__title--index {
+  width: 225px;
+}
+
+.page-header__title--photo {
+  width: 170px;
+}
+
+.page-header__title--form {
+  width: 230px;
+}
+
+.page-header__download {
+  margin-top: 270px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    min-height: 729px;
+
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+
+  .page-header__title {
+    font-size: 50px;
+  }
+
+  .page-header__title--index {
+    font-size: 40px;
+    width: 190px;
+
+    margin-top: 100px;
+    margin-left: 78px;
+    margin-right: auto;
+  }
+
+  .page-header__title--photo {
+    width: 350px;
+  }
+
+  .page-header__title--form {
+    width: 475px;
+  }
+
+  .page-header__download {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    min-height: 853px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+
+  .page-header__wrapper {
+    width: @desktop-width;
+  }
+
+  .page-header__menu-btn {
+    display: none;
+  }
+
+  .page-header__title {
+    font-size: 50px;
+  }
+
+  .page-header__title--index {
+    width: 235px;
+
+    margin-top: 120px;
+    margin-left: 165px;
+    margin-right: auto;
+  }
+
+  .page-header__title--photo {
+    width: 350px;
+  }
+
+  .page-header__title--form {
+    margin-top: 73px;
+    width: 750px;
+  }
+
+  .page-header__download {
+    margin-left: 150px;
+    margin-right: auto;
+  }
 }
