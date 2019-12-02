@@ -52,6 +52,7 @@
     &::before {
       transform: rotate(45deg);
     }
+
     &::after {
       transform: rotate(-45deg);
     }
@@ -62,6 +63,7 @@
     &:focus::after {
       background-color: @pink;
     }
+
     &:active::before,
     &:active::after {
       background-color: @transparent-pink;
@@ -84,9 +86,6 @@
     width: 50px;
     height: 4px;
 
-    border: none;
-    background-color: transparent;
-
     margin-top: 21px;
     margin-right: 19px;
 
@@ -94,12 +93,14 @@
 
     background-color: @white;
     box-shadow: 0 10px 0 0 @white, 0 20px 0 0 @white;
+    border: none;
 
     &:hover,
     &:focus {
       background-color: @pink;
       box-shadow: 0 10px 0 0 @pink, 0 20px 0 0 @pink;
     }
+
     &:active {
       background-color: @transparent-pink;
       box-shadow: 0 10px 0 0 @transparent-pink, 0 20px 0 0 @transparent-pink;
