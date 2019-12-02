@@ -9,15 +9,16 @@
     </head>
     <body>
         <header class="page-header">
-          <nav class="main-nav">
+          <nav class="main-nav main-nav--open">
             <div class="main-nav__wrapper">
               <div class="main-nav__top-block">
-                <a class="main-nav__logo">
-                  <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип приложения PINK">
-                </a>
-              <button class="main-nav__toggle" type="button" aria-label="Закрыть меню"><img src="img/icon-menu-cross.svg" width="24" height="23"></button>
-            </div>
-            <div class="main-nav__wrapper">
+                <div class="main-nav__top-block-container">
+                  <a class="main-nav__logo">
+                    <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип приложения PINK">
+                  </a>
+                  <button class="main-nav__toggle" type="button" aria-label="Меню"></button>
+                </div>
+              </div>
               <ul class="main-nav__list site-navigation-list">
                 <li class="site-navigation-list__item">
                   <a class="site-navigation-list__link" href="index.html">Главная</a>
@@ -36,9 +37,117 @@
           </nav>
           <h2 class="page-header__title page-header__title--form">Конкурс на самое безбашенное путешествие с Пинк</h2>
         </header>
-        <main class="page-main">
+        <main class="page-main page-main--form">
           <section class="page-main__contest contest">
-            <!--Здесь будет форма-->
+            <p class="contest__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></p>
+            <form class="contest__form" action="https://echo.htmlacademy.ru" method="POST">
+              <div class="contest__wrapper user-info-wrapper">
+                <fieldset class="user-info">
+                  <p class="user-info__item">
+                    <label for="last-name"> Фамилия</label>
+                    <input type="text" name="user-last-name" id="last-name" placeholder="Укажите фамилию*">
+                  </p>
+                  <p class="user-info__item">
+                    <label for="first-name"> Имя</label>
+                    <input type="text" name="user-first-name" id="first-name" placeholder="Укажите ваше имя*">
+                  </p>
+                  <p class="user-info__item">
+                    <label for="middle-name"> Отчество</label>
+                    <input type="text" name="user-middle-name" id="middle-name" placeholder="Ну и отчество тоже">
+                  </p>
+                </fieldset>
+              </div>
+              <div class="contest__wrapper user-challenge-wrapper">
+                <fieldset class="user-challenge">
+                    <legend class="user-challenge__legend">Ваши безбашенные достижения в путешествии</legend>
+                    <ul class="user-challenge__list">
+                      <li class="user-challenge__item">
+                        <label>
+                          <input class="visually-hidden" type="checkbox" name="challenge-1" checked>Сделал селфи с акулой
+                          <span class="checkbox-indicator"></span>
+                        </label>
+                      </li>
+                      <li class="user-challenge__item">
+                        <label>
+                          <input class="visually-hidden" type="checkbox" name="challenge-2" checked>Обгорел на пляже
+                          <span class="checkbox-indicator"></span>
+                        </label>
+                      </li>
+                      <li class="user-challenge__item">
+                        <label>
+                          <input class="visually-hidden" type="checkbox" name="challenge-3">Видел Чака Норриса
+                          <span class="checkbox-indicator"></span>
+                        </label>
+                      </li>
+                      <li class="user-challenge__item">
+                        <label>
+                          <input class="visually-hidden" type="checkbox" name="challenge-4">Накупил сувениров
+                          <span class="checkbox-indicator"></span>
+                        </label>
+                      </li>
+                      <li class="user-challenge__item">
+                        <label>
+                          <input class="visually-hidden" type="checkbox" name="challenge-5" checked>Удержал башню
+                          <span class="checkbox-indicator"></span>
+                        </label>
+                      </li>
+                      <li class="user-challenge__item">
+                        <label>
+                          <input class="visually-hidden" type="checkbox" name="challenge-6">Разгромил отель
+                          <span class="checkbox-indicator"></span>
+                        </label>
+                      </li>
+                    </ul>
+                </fieldset>
+              </div>
+              <div class="contest__wrapper user-contacts-wrapper">
+                <fieldset class="user-contacts">
+                  <legend class="user-contacts__legend">
+                    Контактная информация
+                  </legend>
+                  <p class="user-contacts__item">
+                    <label for="phone-number"> Номер телефона</label>
+                    <input type="text" name="user-phone-number" id="phone-number" placeholder="Номер, пожалуйста">
+                  </p>
+                  <p class="user-contacts__item">
+                    <label for="email"> Адрес почты</label>
+                    <input type="text" name="user-email" id="email" placeholder="Введите почту*">
+                  </p>
+                </fieldset>
+              </div>
+              <div class="contest__wrapper user-app-wrapper">
+                <fieldset class="user-app">
+                  <legend class="user-app__legend">С каким приложением путешествовали?</legend>
+                    <ul class="user-app__list">
+                      <li class="user-app__item">
+                        <label>
+                          <input class="visually-hidden" type="radio" name="user-os" value="ios" checked>Pink для iOS
+                          <span class="radio-indicator"></span>
+                        </label>
+                      </li>
+                      <li class="user-app__item">
+                        <label>
+                          <input class="visually-hidden" type="radio" name="user-os" value="android" >Pink на Android
+                          <span class="radio-indicator"></span>
+                        </label>
+                      </li>
+                      <li class="user-app__item">
+                        <label>
+                          <input class="visually-hidden" type="radio" name="user-os" value="whindows-phone" >Windows Phone
+                          <span class="radio-indicator"></span>
+                        </label>
+                      </li>
+                    </ul>
+                </fieldset>
+              </div>
+              <div class="contest__wrapper user-review-wrapper">
+                <fieldset class="user-review">
+                  <legend class="user-review__legend">Опишите свои эмоции</legend>
+                  <textarea class="user-review__item" name="user-review" cols="25" rows="10">Можно прям в красках, не стесняясь в выражениях</textarea>
+                </fieldset>
+              </div>
+              <input class="send-form-btn" type="submit" value="Отправить форму">
+            </form>
           </section>
         </main>
         <footer class="page-footer social-copyright">
@@ -89,5 +198,6 @@
             </div>
           </div>
         </footer>
+        <script src="js/script.js"></script>
     </body>
 </html>

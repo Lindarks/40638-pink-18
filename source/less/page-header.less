@@ -3,14 +3,20 @@
 
   background-color: @navy;
   background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-position: center 200px;
+  background-position:center 260px;
+  background-repeat: no-repeat;
+}
+
+.page-header--additional-bg {
+  background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+  background-position: left 437px, center 260px;
   background-repeat: no-repeat;
 }
 
 .page-header__title {
   font-size: 24px;
   font-weight: 300;
-  line-height: normal;
+  line-height: 28px;
   text-align: center;
   color: @white;
   margin: 0 auto;
@@ -18,18 +24,21 @@
 
 .page-header__title--index {
   width: 225px;
+  padding-top: 25px;
 }
 
 .page-header__title--photo {
   width: 170px;
+  padding-top: 32px;
 }
 
 .page-header__title--form {
   width: 230px;
+  padding-top: 32px;
 }
 
 .page-header__download {
-  margin-top: 270px;
+  margin-top: 317px;
 }
 
 @media (min-width: @tablet-width) {
@@ -38,6 +47,12 @@
 
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-position: top center;
+    background-repeat: no-repeat;
+  }
+
+  .page-header--additional-bg {
+    background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
+    background-position: left 435px, center 260px;
     background-repeat: no-repeat;
   }
 
@@ -77,6 +92,12 @@
     background-repeat: no-repeat;
   }
 
+  .page-header--additional-bg {
+    background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
+    background-position: left 435px, center 260px;
+    background-repeat: no-repeat;
+  }
+
   .page-header__wrapper {
     width: @desktop-width;
   }
@@ -87,13 +108,14 @@
 
   .page-header__title {
     font-size: 50px;
+    line-height: 60px;
   }
 
   .page-header__title--index {
     width: 235px;
 
-    margin-top: 120px;
-    margin-left: 165px;
+    margin-top: 82px;
+    margin-left: 162px;
     margin-right: auto;
   }
 
@@ -107,7 +129,7 @@
   }
 
   .page-header__download {
-    margin-left: 150px;
+    margin-left: 116px;
     margin-right: auto;
   }
 }

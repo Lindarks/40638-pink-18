@@ -3,12 +3,14 @@
 @import "site-navigation-list";
 @import "main-nav.less";
 @import "page-main.less";
+@import "contest";
 @import "download.less";
 @import "promo.less";
 @import "feature.less";
 @import "research.less";
 @import "review.less";
 @import "slider.less";
+@import "tarif.less";
 @import "photo-gallery.less";
 @import "photo-editor.less";
 @import "page-footer.less";
@@ -18,6 +20,13 @@
 @import "social-link.less";
 @import "contacts.less";
 @import "copyright.less";
+
+/*@font-face {
+  font-family: "Open Sans";
+  src:  url("../fonts/opensans.woff2"),
+        url("../fonts/opensansbold.woff2"),
+        url("../fonts/opensanslight.woff2");
+}*/
 
 body {
   min-width: 320px;
@@ -42,7 +51,9 @@ img {
   height: auto;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
