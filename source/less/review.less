@@ -1,7 +1,18 @@
 .review {
-  text-align: center;
+  position: relative;
 
   background-color: @white;
+}
+
+.review::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-top: 30px solid white;
+  border-right: 320px solid transparent;
+  border-bottom: 30px solid transparent;
 }
 
 .review__container {
@@ -11,6 +22,9 @@
 .review__item {
   display: flex;
   flex-direction: column;
+
+  text-align: center;
+
   padding-top: 42px;
   margin: 0;
 }

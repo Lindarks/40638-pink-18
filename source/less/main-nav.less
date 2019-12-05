@@ -1,3 +1,13 @@
+.main-nav--open {
+  position: relative;
+}
+
+.main-nav--closed {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
 .main-nav__top-block-container {
   position: relative;
   display: flex;
@@ -8,6 +18,10 @@
 }
 
 @media (max-width: @mobile-tablet-width) {
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
   .main-nav--closed .main-nav__list {
     display: none;
   }
@@ -80,14 +94,10 @@
 
   .main-nav--closed .main-nav__toggle {
     position: absolute;
-    top: -22px;
-    right: 0;
+    right: 19px;
 
     width: 50px;
     height: 4px;
-
-    margin-top: 21px;
-    margin-right: 19px;
 
     cursor: pointer;
 

@@ -1,3 +1,19 @@
+.map {
+  position: relative;
+}
+
+.map::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 160px solid transparent;
+  border-top: 50px solid white;
+  border-right: 160px solid transparent;
+  border-bottom: 30px solid transparent;
+}
+
 .map iframe {
   width: 320px;
   height: 645px;
