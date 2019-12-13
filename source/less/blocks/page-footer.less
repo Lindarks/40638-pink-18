@@ -1,3 +1,13 @@
 .page-footer {
-  font-family: "Open Sans", "Arial", sans-serif; /*Добавила, чтобы Тревис не ругался на пустой блок*/
+  &--visibility {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    &--visibility {
+      display: block;
+    }
+  }
 }

@@ -5,64 +5,129 @@
   background-color: @white;
 }
 
-.research__container {
-  .container();
-  padding-top: 28px;
-  padding-bottom: 36px;
-
-  min-height: 271px;
-}
-
-.research__wrapper {
-  padding-top: 18px;
-  padding-bottom: 16px;
-  padding-left: 300px;
-
-  min-height: 250px;
-}
-
-.research__title {
-  font-size: 30px;
-  line-height: 1.2;
-  font-weight: 700;
-
-  width: 170px;
-}
-
-.research__description {
-  font-size: 14px;
-  line-height: 1.71;
-}
-
-.research__link {
-  color: @pink;
-  border-bottom: 1px solid @pink;
-}
-
 @media (min-width: @tablet-width) {
   .research {
     display: flex;
-    /*position: relative;*/
-    min-height: 400px;
+    position: relative;
   }
-  /*.research::before {
-    content: "";
-    position: absolute;
-    left: 50px;
-    top: 50px;
 
-    width: 239px;
-    height: 278px;
+  .research__container {
+    .container();
+    padding-top: 48px;
+    padding-bottom: 40px;
+  }
 
-    background-image: url("../img/icon-timer.svg");
-    background-position: bottom center;
-    background-repeat: no-repeat;
-  }*/
+  .research__wrapper {
+    padding-top: 47px;
+    padding-bottom: 30px;
+    padding-left: 309px;
+/*
+    &::before { Нужно изменить размер самого svg
+      content: "";
+      position: absolute;
+      left: 130px;
+      top: 50px;
+
+      width: 300px;
+      height: 345px;
+
+      background-image: url("../img/icon-timer.svg");
+      background-position: bottom center;
+      background-repeat: no-repeat;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 130px;
+      top: 27px;
+
+      width: 300px;
+      height: 345px;
+
+      background-image: url("../img/icon-editor-diagram-fill.svg");
+      background-position: bottom center;
+      background-repeat: no-repeat;
+    }*/
+  }
+
+  .research__title {
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    width: 170px;
+    margin: 0;
+  }
+
+  .research__description {
+    font-size: 14px;
+    line-height: 24px;
+
+    width: 300px;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .research__link {
+    color: @pink;
+    border-bottom: 1px solid @pink;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .research {
     display: block;
-    min-height: 480px;
+
+    background-color: @light-gray;
+  }
+
+  .research__container {
+    .container();
+    padding-bottom: 115px;
+  }
+
+  .research__wrapper {
+    padding-top: 91px;
+    padding-bottom: 30px;
+    padding-left: 366px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 130px;
+      top: 50px;
+
+      width: 300px;
+      height: 345px;
+
+      background-image: url("../img/icon-timer.svg");
+      background-position: bottom center;
+      background-repeat: no-repeat;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 130px;
+      top: 27px;
+
+      width: 300px;
+      height: 345px;
+
+      background-image: url("../img/icon-editor-diagram-fill.svg");
+      background-position: bottom center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .research__title {
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    width: auto;
+    margin: 0;
   }
 }

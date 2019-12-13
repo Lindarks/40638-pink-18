@@ -34,106 +34,110 @@
   margin: 0 auto;
 }
 
-@media (max-width: @mobile-tablet-width) { /* Эти стили работают и на мобильной, и планшетной ширинах */
-  .main-nav--nojs .main-nav__toggle {
-    display: none;
-  }
+.main-nav__logo img {
+  width: 75px;
+  height: auto;
+}
 
-  .main-nav--closed .main-nav__list {
-    display: none;
-  }
+.main-nav--open .main-nav__toggle {
+  position: absolute;
+  top: -2px;
+  right: 19px;
 
-  .main-nav--open .main-nav__toggle {
+  width: 24px;
+  height: 24px;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
     position: absolute;
-    top: -22px;
-    right: 0;
+    left: 10px;
+    top: -3px;
 
-    width: 24px;
-    height: 24px;
+    width: 4px;
+    height: 30px;
 
-    border: none;
-    background-color: transparent;
-
-    margin-top: 21px;
-    margin-right: 19px;
-
-    cursor: pointer;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      left: 10px;
-      top: -3px;
-
-      width: 4px;
-      height: 30px;
-
-      background-color: @white;
-    }
-
-    &::before {
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-    }
-
-    &:hover::before,
-    &:hover::after,
-    &:focus::before,
-    &:focus::after {
-      background-color: @pink;
-    }
-
-    &:active::before,
-    &:active::after {
-      background-color: @transparent-pink;
-    }
+    background-color: @white;
   }
 
-  .main-nav--closed .main-nav__toggle {
-    position: absolute;
-    right: 19px;
+  &::before {
+    transform: rotate(45deg);
+  }
 
-    width: 50px;
-    height: 24px;
+  &::after {
+    transform: rotate(-45deg);
+  }
 
-    background-color: transparent;
-    border: none;
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    background-color: @pink;
+  }
 
-    cursor: pointer;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-
-      width: 50px;
-      height: 4px;
-
-      background-color: @white;
-      box-shadow: 0 10px 0 0 @white, 0 20px 0 0 @white;
-    }
-
-    &:hover::before,
-    &:focus::before {
-      background-color: @pink;
-      box-shadow: 0 10px 0 0 @pink, 0 20px 0 0 @pink;
-    }
-
-    &:active::before {
-      background-color: @transparent-pink;
-      box-shadow: 0 10px 0 0 @transparent-pink, 0 20px 0 0 @transparent-pink;
-    }
+  &:active::before,
+  &:active::after {
+    background-color: @transparent-pink;
   }
 }
 
+.main-nav--closed .main-nav__toggle {
+  position: absolute;
+  right: 19px;
+
+  width: 50px;
+  height: 24px;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 50px;
+    height: 4px;
+
+    background-color: @white;
+    box-shadow: 0 10px 0 0 @white, 0 20px 0 0 @white;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: @pink;
+    box-shadow: 0 10px 0 0 @pink, 0 20px 0 0 @pink;
+  }
+
+  &:active::before {
+    background-color: @transparent-pink;
+    box-shadow: 0 10px 0 0 @transparent-pink, 0 20px 0 0 @transparent-pink;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--closed .main-nav__list {
+  display: none;
+}
+
 @media (min-width: @tablet-width) { /* Эти стили работают на планшетной ширине */
+  .main-nav--open {
+    margin-bottom: -110px;
+  }
+
   .main-nav--open .main-nav__top-block { /* Верхний НЕпрозрачный блок с логотипом при открытом меню на мобильной ширине*/
-    padding-top: 45px;
+    padding-top: 28px;
     padding-bottom: 33px;
 
     background-color: @navy;
@@ -141,11 +145,34 @@
   }
 
   .main-nav--closed .main-nav__top-block { /* Верхний ПРОЗРАЧНЫЙ блок с логотипом при открытом меню на мобильной ширине*/
-    padding-top: 45px;
-    padding-bottom: 33px;
+    padding-top: 27px;
+    padding-bottom: 35px;
 
     background-color: rgba(0, 0, 0, 0.3);
     border: none;
+  }
+
+  .main-nav__logo img {
+    width: 147px;
+    height: auto;
+  }
+
+  .main-nav--closed .main-nav__toggle {
+    &::before {
+      left: -1px;
+      top: 17px;
+    }
+  }
+
+  .main-nav--open .main-nav__toggle {
+    top: 16px;
+    right: 19px;
+
+    &::before,
+    &::after {
+      left: 10px;
+      top: -3px;
+    }
   }
 }
 
@@ -160,8 +187,17 @@
     flex-direction: row;
   }
 
-  .main-nav__top-block {
+  .main-nav--open .main-nav__top-block {
     background-color: transparent;
+  }
+
+  .main-nav__top-block-container {
+    padding: 0;
+  }
+
+  .main-nav__logo img {
+    width: 147px;
+    height: auto;
   }
   /*.main-nav__top-block-container {
     width: 147px;
