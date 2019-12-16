@@ -1,0 +1,39 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+
+  width: 128px;
+  padding-top: 10px;
+}
+
+.copyright__title {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  color: @navy;
+
+  padding-top: 5px;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    padding-top: 18px;
+  }
+
+  .copyright__title {
+    padding-top: 7px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright {
+    width: 153px;
+    padding-top: 24px;
+  }
+
+  .copyright__title {
+    font-size: 18px;
+
+    padding-top: 4px;
+  }
+}

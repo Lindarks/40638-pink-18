@@ -1,0 +1,145 @@
+.photo-gallery {
+  background-color: @white;
+}
+
+.photo-gallery__inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding-left: 18px;
+  padding-top: 12px;
+  padding-bottom: 20px;
+}
+
+.photo-gallery__title {
+  text-align: center;
+  line-height: 30px;
+
+  padding-left: 34px;
+  padding-right: 34px;
+  padding-top: 46px;
+  padding-bottom: 48px;
+  margin: 0;
+
+  &:nth-of-type(2) {
+    padding-top: 3px;
+    padding-bottom: 42px;
+  }
+}
+
+.photo-gallery__list {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.photo-gallery__item {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  background-color: @light-gray;
+}
+
+.photo-gallery__author {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  font-style: normal;
+  color: @navy;
+}
+
+.photo-gallery__author span {
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.photo-gallery__description {
+  margin: 0;
+}
+
+.photo-gallery__reaction {
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: @pink;
+
+  padding-left: 31px;
+  padding-top: 8px;
+}
+
+@media (min-width: @tablet-width) {
+  .photo-gallery__title {
+    font-size: 18px;
+
+    width: 605px;
+    margin: 0 auto;
+    padding-top: 93px;
+    padding-bottom: 87px;
+
+    &:nth-of-type(2) {
+      padding-top: 25px;
+      padding-bottom: 70px;
+    }
+  }
+
+  .photo-gallery__list {
+    .container();
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 50px;
+  }
+
+  .photo-gallery__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+  }
+
+  .photo-gallery__item {
+    width: 300px;
+    margin-right: 0;
+    margin-bottom: 21px;
+  }
+
+  .photo-gallery__item img {
+    width: 300px;
+    height: auto;
+  }
+
+  .photo-gallery__inner-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 110px; /* Из общей высоты вычтены паддинги контейнера */
+    padding-top: 17px;
+    padding-left: 28px;
+  }
+
+  .photo-gallery__reaction {
+    margin-top: auto;
+    padding-left: 0;
+    padding-top: 12px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo-gallery__title {
+    &:nth-of-type(2) {
+      padding-top: 6px;
+      padding-bottom: 65px;
+    }
+  }
+
+  .photo-gallery__list {
+    padding-bottom: 0;
+  }
+
+  .photo-gallery__item {
+    margin-bottom: 54px;
+  }
+}

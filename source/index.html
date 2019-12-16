@@ -9,14 +9,18 @@
     </head>
     <body>
         <header class="page-header">
-          <nav class="main-nav">
+          <nav class="main-nav main-nav--open">
             <div class="main-nav__wrapper">
               <div class="main-nav__top-block">
                 <div class="main-nav__top-block-container">
                   <a class="main-nav__logo">
-                    <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип приложения PINK">
+                      <picture>
+                        <source media="(min-width:1200px)" srcset="img/logo-pink-white-desktop.svg">
+                        <source media="(min-width:660px)" srcset="img/logo-pink-white-tablet.svg">
+                        <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип приложения PINK">
+                      </picture>
                   </a>
-                  <button class="main-nav__toggle" type="button" aria-label="Меню"><img src="img/icon-menu-cross.svg" width="24" height="23"></button>
+                  <button class="main-nav__toggle" type="button" aria-label="Меню"></button>
                 </div>
               </div>
               <ul class="main-nav__list site-navigation-list">
@@ -35,21 +39,25 @@
               </ul>
             </div>
           </nav>
-          <h2 class="page-header__title page-header__title--index">Взгляните на жизнь иначе!</h2>
-          <section class="page-header__download download">
-            <div class="download__container">
-              <div class="download__wrapper">
-                  <h2 class="visually-hidden">Где можно скачать приложение Пинк</h2>
-                  <a class="download__btn" href="https://www.apple.com/ios/app-store/">Скачать приложение</a>
-                  <div class="download__link-wrapper">
-                    <a class="download__link" href="https://www.apple.com/ios/app-store/" aria-label="Скачать из App Store"><img src="img/logo-apple.svg" width="56" height="46" alt="Логотип Apple"></a>
-                    <a class="download__link" href="https://play.google.com/store" aria-label="Скачать из Google Play"><img src="img/logo-android.svg" width="43" height="47" alt="Логотип Android"></a>
-                    <a class="download__link" href="https://www.microsoft.com/en-us/store/apps/windows" aria-label="Скачать из Microsoft Store"><img src="img/logo-microsoft.svg" width="44" height="41" alt="Логотип Microsoft"></a>
+          <div class="page-header__content page-header__content--additional-bg">
+            <div class="page-header__container">
+                <h2 class="page-header__title page-header__title--index">Взгляните на жизнь иначе!</h2>
+                <section class="page-header__download download">
+                  <div class="download__container">
+                    <div class="download__wrapper">
+                        <h2 class="visually-hidden">Где можно скачать приложение Пинк</h2>
+                        <a class="btn btn--download" href="https://www.apple.com/ios/app-store/">Скачать приложение</a>
+                        <div class="download__link-wrapper">
+                          <a class="download__link" href="https://www.apple.com/ios/app-store/" aria-label="Скачать из App Store"><img src="img/logo-apple.svg" width="47" height="56" alt="Логотип Apple"></a>
+                          <a class="download__link" href="https://play.google.com/store" aria-label="Скачать из Google Play"><img src="img/logo-android.svg" width="43" height="47" alt="Логотип Android"></a>
+                          <a class="download__link" href="https://www.microsoft.com/en-us/store/apps/windows" aria-label="Скачать из Microsoft Store"><img src="img/logo-microsoft.svg" width="44" height="41" alt="Логотип Microsoft"></a>
+                        </div>
+                        <p class="download__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+                    </div>
                   </div>
-                  <p class="download__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-              </div>
+                </section>
             </div>
-          </section>
+          </div>
         </header>
         <main class="page-main">
           <h1 class="visually-hidden">Приложение Пинк поможет раскрасить серые будни</h1>
@@ -71,10 +79,10 @@
                     </div>
                     <div class="feature__block second-block">
                         <h3 class="feature__title">Меняет мир вокруг</h3>
-                        <p class="feature__description">Сделайте снимок и украсьте его смайликом или текстовой надписью, чтобы усилить эффект</p>
+                        <p class="feature__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
                     </div>
                     <div class="feature__block third-block">
-                        <h3 class="feature__title">Заводит новых друзей</h3>
+                        <h3 class="feature__title">Заводит<br> новых друзей</h3>
                         <p class="feature__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
                     </div>
                   </div>
@@ -83,8 +91,8 @@
           <section class="page-main__research research">
             <div class="research__container">
               <div class="research__wrapper">
-                  <h3 class="research__title">Эффект<br> на 24 часа!</h3>
-                  <p class="research__description">Британские ученый провели исследования и доказали, что положительный эффект от использования приложения длится целый сутки!</p>
+                  <h3 class="research__title">Эффект на 24 часа!</h3>
+                  <p class="research__description">Британские ученый провели исследования и доказали, что положительный эффект<br> от использования приложения длится целый сутки!</p>
                   <a class="research__link" href="#">Узнать больше об исследовании</a>
               </div>
             </div>
@@ -115,24 +123,39 @@
                       </div>
                 </div>
                 <div class="review__toggles slider__toggles">
-                  <button class="slider__toggle" type="button">1</button>
-                  <button class="slider__toggle" type="button">2</button>
-                  <button class="slider__toggle" type="button">3</button>
+                  <button class="btn btn--slider-toggle slider__toggle" type="button"></button>
+                  <button class="btn btn--slider-toggle slider__toggle" type="button"></button>
+                  <button class="btn btn--slider-toggle slider__toggle" type="button"></button>
                 </div>
             </div>
           </section>
           <section class="page-main__tarif tarif">
             <div class="tarif__container">
               <div class="tarif__wrapper">
-                <table> <!--Пока таблица исключительно для красоты-->
+                <table class="tarif__list">
                   <tr>
-                    <td>Розовый фильтр</td>
+                    <th class="tarif__name"></th>
+                    <th class="tarif__name">База <br><span>1,99 USD</span></th>
+                    <th class="tarif__name">Стандарт <br><span>3,99 USD</span></th>
+                    <th class="tarif__name">Анлим <br><span>9,99 USD</span></th>
                   </tr>
                   <tr>
-                    <td>Смайлики</td>
+                    <td class="tarif__option">Розовый фильтр</td>
+                    <td class="tarif__option tarif__option--yes"></td>
+                    <td class="tarif__option tarif__option--yes"></td>
+                    <td class="tarif__option tarif__option--yes"></td>
                   </tr>
                   <tr>
-                    <td>Комментарии</td>
+                    <td class="tarif__option">Смайлики</td>
+                    <td class="tarif__option tarif__option--no"></td>
+                    <td class="tarif__option tarif__option--yes"></td>
+                    <td class="tarif__option tarif__option--yes"></td>
+                  </tr>
+                  <tr>
+                    <td class="tarif__option">Комментарии</td>
+                    <td class="tarif__option tarif__option--no"></td>
+                    <td class="tarif__option tarif__option--no"></td>
+                    <td class="tarif__option tarif__option--yes"></td>
                   </tr>
                 </table>
               </div>
@@ -144,15 +167,15 @@
             <div class="contacts__wrapper">
               <p class="contacts__title">Остались вопросы? Свяжитесь с нами!</p>
               <div class="contacts__group">
-                <div class="contacts__phone">
+                <div class="contacts__item contacts__item--phone">
                   <b class="contacts__option-name">Звоните:</b>
                   <p class="contacts__option-text">+7 (812) 555-66-66</p>
                 </div>
-                <div class="contacts__email">
+                <div class="contacts__item contacts__item--email">
                   <b class="contacts__option-name">Пишите:</b>
                   <p class="contacts__option-text">mail.htmlacademy.ru</p>
                 </div>
-                <div class="contacts__address">
+                <div class="contacts__item contacts__item--address">
                   <b class="contacts__option-name">Приезжайте в гости:</b>
                   <address class="contacts__option-text">ул. Большая Конюшенная, 19/8</address>
                 </div>
@@ -165,8 +188,8 @@
             </div>
         </div>
         </footer>
-        <footer class="page-footer social-copyright social-copyright--visibility">
-          <div class="social-copyright__container">
+        <footer class="page-footer social-copyright page-footer--visibility">
+          <div class="social-copyright__container social-copyright__container--index">
             <div class="social-copyright__wrapper">
                 <a class="social-copyright__logo">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="146.3px" height="40.375px" viewBox="0 0 146.3 40.375" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
@@ -213,5 +236,6 @@
             </div>
           </div>
         </footer>
+        <script src="js/script.js"></script>
     </body>
 </html>

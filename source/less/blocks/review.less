@@ -1,0 +1,139 @@
+.review {
+  position: relative;
+
+  background-color: @white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 0 solid transparent;
+    border-top: 30px solid white;
+    border-right: 320px solid transparent;
+    border-bottom: 30px solid transparent;
+  }
+}
+
+.review__container {
+  .container();
+}
+
+.review__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  padding-top: 42px;
+  margin: 0;
+
+  &:nth-of-type(2),
+  &:nth-of-type(3) {
+    display: none;
+  }
+}
+
+.review__author {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.review__author-info {
+  display: none;
+}
+
+.review__text {
+  line-height: 30px;
+
+  margin: 0;
+  padding-top: 14px;
+  padding-bottom: 28px;
+}
+
+.review__toggles {
+  display: flex;
+  justify-content: center;
+
+  padding-top: 26px;
+}
+
+@media (min-width: @tablet-width) {
+  .review {
+    &::after {
+      border-left: 0 solid transparent;
+      border-top: 55px solid white;
+      border-right: 660px solid transparent;
+      border-bottom: 55px solid transparent;
+    }
+  }
+
+  .review__container {
+    padding-bottom: 15px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 564px;
+      top: 73px;
+
+      width: 80px;
+      height: 65px;
+
+      background-image: url("../img/icon-quotes.svg");
+      background-position: bottom center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .review__author {
+    font-size: 20px;
+    order: 1;
+  }
+
+  .review__text {
+    width: 620px;
+    font-size: 18px;
+    line-height: 30px;
+
+    padding-bottom: 35px;
+  }
+
+  .review__author-info {
+    display: block;
+    font-size: 14px;
+    line-height: 30px;
+    order: 2;
+
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review {
+    &::after {
+      border-left: 0 solid transparent;
+      border-top: 55px solid white;
+      border-right: 1200px solid transparent;
+      border-bottom: 55px solid transparent;
+    }
+  }
+
+  .review__container {
+    padding-top: 130px;
+  }
+
+  .review__author {
+    font-size: 24px;
+  }
+
+  .review__author-info {
+    display: block;
+    font-size: 18px;
+  }
+}

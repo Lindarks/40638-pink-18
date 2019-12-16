@@ -1,23 +1,35 @@
 @import "variables.less";
-@import "page-header.less";
-@import "site-navigation-list";
-@import "main-nav.less";
-@import "page-main.less";
-@import "download.less";
-@import "promo.less";
-@import "feature.less";
-@import "research.less";
-@import "review.less";
-@import "slider.less";
-@import "photo-gallery.less";
-@import "photo-editor.less";
-@import "page-footer.less";
-@import "map";
-@import "social-copyright.less";
-@import "social.less";
-@import "social-link.less";
-@import "contacts.less";
-@import "copyright.less";
+@import "mixin.less";
+@import "blocks/btn.less";
+@import "blocks/page-header.less";
+@import "blocks/site-navigation-list";
+@import "blocks/main-nav.less";
+@import "blocks/page-main.less";
+@import "blocks/contest";
+@import "blocks/download.less";
+@import "blocks/promo.less";
+@import "blocks/feature.less";
+@import "blocks/research.less";
+@import "blocks/review.less";
+@import "blocks/slider.less";
+@import "blocks/tarif.less";
+@import "blocks/photo-gallery.less";
+@import "blocks/daily-special";
+@import "blocks/photo-editor.less";
+@import "blocks/page-footer.less";
+@import "blocks/map";
+@import "blocks/social-copyright.less";
+@import "blocks/social.less";
+@import "blocks/social-link.less";
+@import "blocks/contacts.less";
+@import "blocks/copyright.less";
+
+/*@font-face {
+  font-family: "Open Sans";
+  src:  url("../fonts/opensans.woff2"),
+        url("../fonts/opensansbold.woff2"),
+        url("../fonts/opensanslight.woff2");
+}*/
 
 body {
   min-width: 320px;
@@ -38,11 +50,12 @@ a {
 }
 
 img {
-  max-width: 100%;
   height: auto;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
