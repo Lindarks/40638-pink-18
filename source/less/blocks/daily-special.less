@@ -36,6 +36,7 @@
 }
 
 .daily-special__reaction {
+  position: relative;
   font-size: 12px;
   line-height: 24px;
   font-weight: normal;
@@ -45,6 +46,17 @@
   margin: 0;
   padding-left: 49px;
   padding-top: 10px;
+}
+
+.daily-special__reaction-icon {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+
+  width: 13px;
+  height: 12px;
+
+  fill: @pink;
 }
 
 @media (min-width: @tablet-width) {
