@@ -7,8 +7,7 @@
 
 @media (min-width: @tablet-width) {
   .research {
-    display: flex;
-    position: relative;
+    display: block;
   }
 
   .research__container {
@@ -18,10 +17,12 @@
   }
 
   .research__wrapper {
+    display: flex;
+    justify-content: space-between;
+
     padding-top: 47px;
-    padding-bottom: 30px;
-    padding-left: 309px;/*
-    &::before { Нужно изменить размер самого svg
+    padding-bottom: 30px;/*
+    &::before { Псеводоэлемент не нужен
       content: "";
       position: absolute;
       left: 130px;
@@ -50,9 +51,28 @@
     }*/
   }
 
+  .research__picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 280px;
+
+    background-image: url("../img/icon-timer.svg"), url("../img/icon-editor-diagram-fill.svg");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+  }
+
+  .research__picture span {
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 150px;
+    color: @pink;
+  }
+
   .research__title {
     font-size: 30px;
-    line-height: 1.2;
+    line-height: 37px;
     font-weight: 700;
 
     width: 170px;
@@ -90,9 +110,9 @@
   .research__wrapper {
     padding-top: 91px;
     padding-bottom: 30px;
-    padding-left: 366px;
+    padding-left: 366px;/*
 
-    &::before {
+    &::before { Псевдоэлемент не нужен
       content: "";
       position: absolute;
       left: 130px;
@@ -118,7 +138,7 @@
       background-image: url("../img/icon-editor-diagram-fill.svg");
       background-position: bottom center;
       background-repeat: no-repeat;
-    }
+    }*/
   }
 
   .research__title {

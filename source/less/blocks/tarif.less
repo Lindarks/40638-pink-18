@@ -7,18 +7,28 @@
 }
 
 .tarif__wrapper {
-  display: flex;
+  display: table;
   justify-content: center;
   align-items: center;
 }
 
 .tarif__list {
-  width: 100%;
+  display: table-row;
   background-color: @white;
   border-collapse: collapse;
 }
 
+.tarif__item {
+  display: table-cell;
+}
+
 .tarif__name {
+  display: table-cell;
+
+  text-transform: uppercase;
+  color: @white;/*
+.tarif__name {
+  display: table-cell;
   text-transform: uppercase;
   color: @white;
 
@@ -40,7 +50,7 @@
   &:nth-child(2),
   &:nth-child(3) {
     border-right-color: @gray;
-  }
+  }*/
 }
 
 .tarif__name span {
@@ -48,28 +58,25 @@
   line-height: 30px;
   font-weight: 300;
 }
-
+/*
 .tarif__list td {
   width: 25%;
   border: 2px solid @gray;
 }
-
+*/
 .tarif__option {
+  display: table-cell;/*
   padding-top: 10px;
   padding-bottom: 11px;
-  padding-left: 16px;
+  padding-left: 16px;*/
+}
 
-  &--yes {
-    background-image: url("../../img/icon-yes.svg");
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
+.tarif__option__yes-icon {
+  fill: @green;
+}
 
-  &--no {
-    background-image: url("../../img/icon-no.svg");
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
+.tarif__option__no-icon {
+  fill: @orange;
 }
 
 @media (min-width: @tablet-width) {

@@ -61,6 +61,7 @@
 }
 
 .photo-gallery__reaction {
+  position: relative;
   font-size: 12px;
   line-height: 24px;
   font-weight: normal;
@@ -69,6 +70,17 @@
 
   padding-left: 31px;
   padding-top: 8px;
+}
+
+.photo-gallery__reaction-icon {
+  position: absolute;
+  top: 13px;
+  left: 0;
+
+  width: 13px;
+  height: 12px;
+
+  fill: @pink;
 }
 
 @media (min-width: @tablet-width) {
