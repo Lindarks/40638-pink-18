@@ -1,6 +1,6 @@
 .main-nav--open {
   position: relative;
-  margin-bottom: -66px;
+  margin-bottom: -70px;
 }
 
 .main-nav--closed {
@@ -93,7 +93,8 @@
 
 .main-nav--closed .main-nav__toggle {
   position: absolute;
-  right: 19px;
+  top: 17px;
+  right: 20px;
 
   width: 50px;
   height: 24px;
@@ -142,8 +143,8 @@
   }
 
   .main-nav--open .main-nav__top-block { /* Верхний НЕпрозрачный блок с логотипом при открытом меню на мобильной ширине*/
-    padding-top: 28px;
-    padding-bottom: 33px;
+    padding-top: 27px;
+    padding-bottom: 42px;
 
     background-color: @navy;
     border-bottom: 1px solid @black;
@@ -151,7 +152,7 @@
 
   .main-nav--closed .main-nav__top-block { /* Верхний ПРОЗРАЧНЫЙ блок с логотипом при открытом меню на мобильной ширине*/
     padding-top: 27px;
-    padding-bottom: 35px;
+    padding-bottom: 43px;
 
     background-color: rgba(0, 0, 0, 0.3);
     border: none;
@@ -165,13 +166,6 @@
   .main-nav__logo img {
     width: 147px;
     height: auto;
-  }
-
-  .main-nav--closed .main-nav__toggle {
-    &::before {
-      left: -1px;
-      top: 17px;
-    }
   }
 
   .main-nav--open .main-nav__toggle {
@@ -199,6 +193,7 @@
 
   .main-nav--open .main-nav__top-block {
     background-color: transparent;
+    border: none;
   }
 
   .main-nav__top-block-container {

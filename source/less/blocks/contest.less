@@ -3,18 +3,34 @@
 }
 
 .contest__wrapper {
-  padding-left: 22px;
-  padding-right: 22px;
-  padding-top: 27px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: 34px;
 
+  &--user-info {
+    padding-top: 25px;
+  }
+
   &--user-app {
+    padding-top: 28px;
     padding-bottom: 27px;
     background-color: @light-gray;
   }
 
   &--user-challenge {
+    padding-top: 36px;
+    padding-bottom: 39px;
     background-color: @light-gray;
+  }
+
+  &--user-contacts {
+    padding-top: 22px;
+    padding-bottom: 35px;
+  }
+
+  &--user-review {
+    padding-top: 37px;
+    padding-bottom: 35px;
   }
 
   &--btn {
@@ -23,7 +39,7 @@
   }
 
   &--note {
-    padding-top: 28px;
+    padding-top: 31px;
   }
 }
 
@@ -52,11 +68,22 @@
   padding-right: 20px;
 }
 
-.user-challenge__legend {
-  padding-top: 10px;
+.contest__fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
 }
 
 .user-contacts__legend {
+  display: none;
+}
+
+.user-contacts__list {
+  .list-reset();
+}
+
+.user-contacts__item-image {
   display: none;
 }
 
@@ -65,18 +92,17 @@
   padding-bottom: 11px;
 }
 
-.user-review__legend {
-  padding-top: 10px;
+.user-app__list {
+  .list-reset();
 }
 
-.user-challenge__list,
-.user-app__list {
+.user-challenge__list {
   .list-reset();
 }
 
 .user-challenge__item {
   position: relative;
-  padding-left: 68px;
+  padding-left: 69px;
   padding-top: 45px;
   padding-bottom: 7px;
 }
@@ -93,7 +119,7 @@
 
 .user-challenge__item input[type="checkbox"] + .checkbox-indicator {
   position: absolute;
-  left: -2px;
+  left: 0;
   top: 40px;
 
   box-sizing: border-box;
@@ -137,7 +163,7 @@
 
 .user-app__item {
   position: relative;
-  padding-left: 68px;
+  padding-left: 69px;
   padding-top: 26px;
   padding-bottom: 20px;
 }
@@ -149,12 +175,12 @@
 
 .user-app__item input[type="radio"] + .radio-indicator {
   position: absolute;
-  left: 0;
-  top: 24px;
+  left: 1px;
+  top: 23px;
 
   box-sizing: border-box;
-  width: 37px;
-  height: 37px;
+  width: 38px;
+  height: 38px;
 
   background-color: @white;
   border: 2px solid @gray;
@@ -170,19 +196,13 @@
   content: "";
 
   position: absolute;
-  left: 8px;
-  top: 8px;
+  left: 9px;
+  top: 9px;
 
   width: 15px;
   height: 15px;
   background-color: @pink;
   border-radius: 50%;
-}
-
-.contest__form fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
 }
 
 .contest__form input[type="text"] {
@@ -191,7 +211,7 @@
   color: @navy;
 
   box-sizing: border-box;
-  width: 276px;
+  width: 280px;
   padding-bottom: 15px;
   padding-left: 20px;
   padding-top: 16px;
@@ -217,10 +237,9 @@
 
 .user-info__item,
 .user-contacts__item {
-  width: 276px;
+  position: relative;
   margin: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
 }
 
 .user-info label,
@@ -231,7 +250,9 @@
   text-transform: uppercase;
   color: @pink;
 
-  padding-left: 20px;
+  padding-left: 22px;
+  padding-top: 8px;
+  padding-bottom: 4px;
 }
 
 .contest__form textarea {
@@ -241,10 +262,11 @@
 
   box-sizing: border-box;
   width: 280px;
+  min-height: 200px;
   padding-top: 13px;
-  padding-left: 16px;
+  padding-left: 18px;
   padding-right: 16px;
-  margin-top: 19px;
+  margin-top: 16px;
 
   background-color: transparent;
   border: 2px solid @gray;
@@ -267,7 +289,13 @@
 }
 
 .contest__note-text span {
-  color: @pink;
+  &:first-child {
+    color: @pink;
+  }
+
+  &:last-child {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -288,94 +316,330 @@
     display: inline-block;
   }
 
-  .contest__wrapper {
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 27px;
-    padding-bottom: 34px;
-
-    &--user-app {
-      padding-bottom: 27px;
-      background-color: @light-gray;
-    }
-
-    &--user-challenge {
-      background-color: @light-gray;
-    }
-
-    &--btn {
-      padding-top: 7px;
-      padding-bottom: 7px;
-    }
-
-    &--note {
-      padding-top: 28px;
-    }
-  }
-
-  .contest__form fieldset {
-    border: 2px solid @gray;
-  }
-
-  .user-contacts__legend {
-    display: block;
-  }
-}
-
-@media (min-width: @desktop-width) {
   .contest__form {
     display: flex;
     flex-wrap: wrap;
   }
 
   .contest__wrapper {
+    padding: 0;
+    margin-top: 27px;
+    width: 100%;
+
     &--user-info {
       order: 1;
-      width: 50%;
+      margin-top: 70px;
     }
 
     &--user-app {
       order: 2;
+      margin-top: -4px;
+
+      background-color: @light-gray;
+    }
+
+    &--user-contacts {
+      order: 3;
+      margin-top: 56px;
+    }
+
+    &--user-challenge {
+      order: 4;
+      margin-top: 57px;
+
+      background-color: @light-gray;
+    }
+
+    &--user-review {
+      order: 5;
+      margin-top: 57px;
+    }
+
+    &--btn {
+      order: 6;
+      margin-top: 66px;
       width: 50%;
+    }
+
+    &--note {
+      order: 7;
+      margin-top: 87px;
+      width: 50%;
+    }
+  }
+
+  .contest__fieldset {
+    border: 2px solid @gray;
+  }
+
+  .user-info {
+    border: none;
+  }
+
+  .user-app__list {
+    padding-left: 44px;
+    padding-bottom: 52px;
+  }
+
+  .user-app__item {
+    padding-left: 74px;
+    padding-top: 37px;
+    padding-bottom: 8px;
+  }
+
+  .user-contacts__legend {
+    display: block;
+  }
+
+  .user-contacts__list {
+    padding-top: 10px;
+    padding-bottom: 26px;
+  }
+
+  .user-contacts__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 26px;
+    padding-left: 58px;
+    padding-bottom: 0;
+  }
+
+  .user-contacts__item label {
+    padding-top: 7px;
+    padding-left: 20px;
+    padding-bottom: 3px;
+  }
+
+  .user-contacts__item input[type="text"] {
+    order: -1;
+    width: 500px;
+  }
+
+  .user-contacts__item span {
+    position: absolute;
+    top: 28px;
+    right: 58px;
+    width: 62px;
+    height: 62px;
+
+    background-color: @gray;
+  }
+
+  .user-contacts__item-image {
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+
+    top: 50px;
+    right: 80px;
+  }
+
+  .user-contacts__item svg {
+    fill: @pink;
+  }
+
+  .user-info__item {
+    display: flex;
+  }
+
+  .user-info label {
+    padding-left: 0;
+    padding-right: 23px;
+    padding-top: 19px;
+  }
+
+  .user-info__item {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+
+  .user-info__item input[type="text"] {
+    width: 100%;
+  }
+
+  .user-challenge__list {
+    padding-left: 58px;
+    padding-bottom: 49px;
+  }
+
+  .user-challenge__item {
+    padding-left: 60px;
+    padding-top: 47px;
+    padding-bottom: 5px;
+  }
+
+  .user-challenge__item input[type="checkbox"] + .checkbox-indicator {
+    left: 0;
+    top: 44px;
+  }
+
+  .user-app__item input[type="radio"] + .radio-indicator {
+    left: 14px;
+    top: 34px;
+  }
+
+  .contest__form textarea {
+    width: 500px;
+    min-height: 191px;
+    padding-top: 13px;
+    padding-left: 18px;
+    padding-right: 16px;
+    margin-top: 38px;
+    margin-left: 59px;
+    margin-bottom: 46px;
+  }
+
+  .contest__note-text {
+    text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contest__title {
+    padding-left: 85px;
+    padding-right: 85px;
+    padding-top: 93px;
+  }
+
+  .contest__wrapper {
+    padding: 0;
+    margin-top: 28px;
+
+    &--user-info {
+      width: 46.5%;
+    }
+
+    &--user-app {
+      width: 46.5%;
+      margin-left: auto;
+      margin-top: 59px;
 
       background-color: @white;
     }
 
     &--user-contacts {
-      order: 3;
       width: 100%;
+      margin-top: 56px;
     }
 
     &--user-challenge {
-      order: 4;
       width: 100%;
+      margin-top: 59px;
 
       background-color: @white;
     }
 
     &--user-review {
-      order: 5;
-      width: 100%;
+      margin-top: 57px;
     }
 
     &--btn {
-      order: 6;
-      width: 100%;
+      margin-top: 65px;
     }
 
     &--note {
-      order: 7;
-      width: 100%;
+      margin-top: 86px;
+      margin-left: auto;
+    }
+  }
+
+  .user-app__list {
+    padding-left: 63px;
+    padding-bottom: 0;
+  }
+
+  .user-app__item {
+    padding-left: 72px;
+    padding-top: 39px;
+    padding-bottom: 5px;
+
+    &:last-child {
+      padding-bottom: 60px;
     }
   }
 
   .user-challenge__list {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
+    height: 169px;
+
+    padding-left: 58px;
+    padding-bottom: 51px;
   }
 
-  .contest__wrapper--user-challenge .user-challenge__item {
-    width: 26%;
+  .user-challenge__item {
+    padding-left: 58px;
+    padding-top: 47px;
+  }
+
+  .user-info {
+    padding-top: 6px;
+  }
+
+  .user-info__item {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+
+  .user-info label {
+    padding-top: 18px;
+    padding-right: 21px;
+  }
+
+  .user-contacts__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+
+  .user-contacts__item {
+    padding-top: 22px;
+    padding-left: 0;
+    width: 46.5%;
+
+    &:nth-of-type(2n-1) {
+      padding-left: 57px;
+    }
+
+    &::after {
+      top: 35px;
+    }
+  }
+
+  .user-contacts__item label {
+    padding-top: 10px;
+  }
+
+  .user-contacts__item input[type="text"] {
+    order: -1;
+    width: 378px;
+  }
+
+  .user-contacts__item span {
+    top: 23px;
+  }
+
+  .user-contacts__item-image {
+    top: 46px;
+  }
+
+  .contest__form textarea {
+    width: 820px;
+    min-height: 128px;
+    padding-top: 14px;
+    padding-left: 19px;
+    margin-top: 34px;
+    margin-left: 58px;
+    margin-bottom: 36px;
+  }
+
+  .contest__note-text span {
+    &:last-child {
+      display: inline;
+    }
   }
 }

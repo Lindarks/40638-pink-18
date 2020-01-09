@@ -20,54 +20,52 @@
     display: flex;
     justify-content: space-between;
 
-    padding-top: 47px;
-    padding-bottom: 30px;/*
-    &::before { Псеводоэлемент не нужен
-      content: "";
-      position: absolute;
-      left: 130px;
-      top: 50px;
-
-      width: 300px;
-      height: 345px;
-
-      background-image: url("../img/icon-timer.svg");
-      background-position: bottom center;
-      background-repeat: no-repeat;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 130px;
-      top: 27px;
-
-      width: 300px;
-      height: 345px;
-
-      background-image: url("../img/icon-editor-diagram-fill.svg");
-      background-position: bottom center;
-      background-repeat: no-repeat;
-    }*/
+    padding-top: 10px;
+    padding-bottom: 60px;
   }
 
   .research__picture {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 240px;
-    height: 280px;
 
-    background-image: url("../img/icon-timer.svg"), url("../img/icon-editor-diagram-fill.svg");
-    background-position: bottom center;
-    background-repeat: no-repeat;
+    &::before {
+      content: "24";
+      position: absolute;
+      top: 77px;
+      left: 65px;
+
+      font-size: 96px;
+      font-weight: 700;
+      line-height: 150px;
+      color: @pink;
+    }
   }
 
-  .research__picture span {
-    font-size: 96px;
-    font-weight: 700;
-    line-height: 150px;
-    color: @pink;
+  .research__picture-part-1 {
+    position: absolute;
+    left: 1px;
+    top: 0;
+  }
+
+  .research__picture-part-2 {
+    position: absolute;
+    left: 19px;
+    top: 56px;
+  }
+
+  .research__picture-part-1 svg {
+    fill: @middle-gray;
+  }
+
+  .research__picture-part-2 svg {
+    fill: @pink;
+  }
+
+  .research__info {
+    width: 50%;
+    padding-top: 37px;
   }
 
   .research__title {
@@ -79,14 +77,23 @@
     margin: 0;
   }
 
+  .research__title span {
+    display: block;
+  }
+
   .research__description {
     font-size: 14px;
     line-height: 24px;
 
-    width: 300px;
+    width: 99%;
     margin: 0;
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+
+  .research__description b {
+    display: block;
+    font-weight: 400;
   }
 
   .research__link {
@@ -104,41 +111,46 @@
 
   .research__container {
     .container();
-    padding-bottom: 115px;
+    padding-bottom: 86px;
   }
 
   .research__wrapper {
     padding-top: 91px;
     padding-bottom: 30px;
-    padding-left: 366px;/*
+  }
 
-    &::before { Псевдоэлемент не нужен
-      content: "";
-      position: absolute;
-      left: 130px;
-      top: 50px;
+  .research__picture {
+    &::before {
+      top: 24px;
+      left: 80px;
 
-      width: 300px;
-      height: 345px;
-
-      background-image: url("../img/icon-timer.svg");
-      background-position: bottom center;
-      background-repeat: no-repeat;
+      font-size: 120px;
     }
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      left: 130px;
-      top: 27px;
+  .research__picture-part-1 {
+    left: -25px;
+    top: -91px;
+  }
 
-      width: 300px;
-      height: 345px;
+  .research__picture-part-2 {
+    left: 23px;
+    top: -21px;
+  }
 
-      background-image: url("../img/icon-editor-diagram-fill.svg");
-      background-position: bottom center;
-      background-repeat: no-repeat;
-    }*/
+  .research__picture-part-1 svg {
+    width: 350px;
+    height: 345px;
+  }
+
+  .research__picture-part-2 svg {
+    width: 253px;
+    height: 253px;
+  }
+
+  .research__info {
+    width: 573px;
+    padding-top: 0;
   }
 
   .research__title {
@@ -148,5 +160,37 @@
 
     width: auto;
     margin: 0;
+  }
+
+  .research__title span {
+    display: inline;
+  }
+
+  .research__description {
+    font-size: 18px;
+    line-height: 30px;
+
+    padding-top: 22px;
+    padding-bottom: 10px;
+  }
+
+  .research__description b {
+    display: inline;
+  }
+
+  .research__description i {
+    display: block;
+    font-style: normal;
+  }
+
+  .research__description span {
+    display: block;
+  }
+
+  .research__link {
+    display: inline-block;
+    font-size: 18px;
+
+    padding-top: 22px;
   }
 }

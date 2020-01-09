@@ -6,7 +6,7 @@
 
 .contacts__container {
   .container();
-  padding-top: 50px;
+  padding-top: 42px;
 }
 
 .contacts__wrapper {
@@ -18,32 +18,57 @@
 .contacts__title {
   font-size: 24px;
   font-weight: 300;
-  line-height: normal;
+  line-height: 30px;
   text-align: center;
   width: 222px;
+  margin: 0;
 }
 
 .contacts__group {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 46px;
 }
 
 .contacts__item {
-  text-align: center;
+  padding-top: 21px;
 
-  width: 50%;
-  margin-bottom: 28px;
+  &--phone b {
+    padding-left: 98px;
+  }
+
+  &--phone p {
+    padding-left: 37px;
+  }
+
+  &--email b {
+    padding-left: 101px;
+  }
+
+  &--email p {
+    padding-left: 22px;
+  }
+
+  &--address b {
+    padding-left: 42px;
+  }
+
+  &--address address {
+    text-align: center;
+    padding-left: 0;
+    padding-top: 2px;
+  }
 }
 
 .contacts__option-name {
   font-size: 18px;
-  text-align: center;
   color: @navy;
 }
 
 .contacts__option-text {
   font-size: 24px;
+  line-height: 30px;
   font-weight: 300;
   font-style: normal;
   color: @pink;
@@ -62,12 +87,46 @@
 
   .contacts__group {
     display: flex;
-    flex-wrap: wrap; /* на случай переполнения */
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
 
-    padding-top: 43px;
-    padding-bottom: 46px;
+    padding-top: 0;
+    padding-bottom: 28px;
+  }
+
+  .contacts__item {
+    width: 50%;
+    padding-top: 45px;
+
+    &--phone b {
+      padding-left: 107px;
+    }
+
+    &--phone p {
+      padding-left: 47px;
+      padding-top: 1px;
+    }
+
+    &--email b {
+      padding-left: 119px;
+    }
+
+    &--email p {
+      padding-left: 40px;
+      padding-top: 3px;
+    }
+
+    &--address b {
+      padding-left: 57px;
+    }
+
+    &--address address {
+      width: 212px;
+      text-align: center;
+      padding-left: 50px;
+      padding-top: 2px;
+    }
   }
 
   .contacts__title {
@@ -89,35 +148,60 @@
 @media (min-width: @desktop-width) {
   .contacts__title {
     font-size: 50px;
-    line-height: 57px;
+    line-height: 60px;
     width: 462px;
-    padding-top: 67px;
+    padding-top: 65px;
     padding-bottom: 15px;
   }
 
   .contacts__group {
     display: flex;
-    flex-wrap: wrap; /* на случай переполнения */
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
 
     width: 100%;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
   }
 
   .contacts__item {
     width: 33%;
+    padding-top: 40px;
 
     &--phone {
       order: 1;
+    }
+
+    &--phone b {
+      padding-left: 103px;
+    }
+
+    &--phone p {
+      padding-left: 43px;
+      padding-top: 21px;
     }
 
     &--address {
       order: 2;
     }
 
+    &--address address {
+      width: 212px;
+      padding-left: 48px;
+      padding-top: 21px;
+    }
+
     &--email {
       order: 3;
+    }
+
+    &--email b {
+      padding-left: 124px;
+    }
+
+    &--email p {
+      padding-left: 45px;
+      padding-top: 23px;
     }
   }
 }
