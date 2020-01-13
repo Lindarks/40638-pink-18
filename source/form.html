@@ -212,24 +212,36 @@
         </div>
       </footer>
       <section class="modal modal--form-error">
-        <div class="modal__container">
-          <div class="modal__message">
-            <h2 class="modal__title">Что-то пошло не так!</h2>
-            <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли из заполнить</p>
+        <div class="modal__container modal__container--first">
+          <div class="modal__container-inner">
+            <div class="modal__message">
+              <h2 class="modal__title">Что-то пошло не так!</h2>
+              <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли из заполнить</p>
+            </div>
           </div>
-          <div class="modal__button">
-            <button class="btn btn--modal">Oк</button>
+        </div>
+        <div class="modal__container modal__container--second">
+          <div class="modal__container-inner">
+            <div class="modal__button">
+              <button class="btn btn--modal">Oк</button>
+            </div>
           </div>
         </div>
       </section>
       <section class="modal modal--form-confirmation">
-        <div class="modal__container">
-          <div class="modal__message">
-            <h2 class="modal__title">Ваша заявка отправлена</h2>
-            <p class="modal__text">Спасибо за ваше участние, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+        <div class="modal__container modal__container--first">
+          <div class="modal__container-inner">
+            <div class="modal__message">
+              <h2 class="modal__title">Ваша заявка отправлена</h2>
+              <p class="modal__text">Спасибо за ваше участние, ваша заявка уже поступила к нам. В ближайшее <span>время мы рассмотрим ее и </span>оповестим вас.</p>
+            </div>
           </div>
-          <div class="modal__button">
-            <button class="btn btn--modal">Закрыть окно</button>
+        </div>
+        <div class="modal__container modal__container--second">
+          <div class="modal__container-inner">
+            <div class="modal__button">
+              <button class="btn btn--modal">Закрыть окно</button>
+            </div>
           </div>
         </div>
       </section>

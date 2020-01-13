@@ -21,20 +21,43 @@
     border-color: @white;
   }
 
+  &--download:hover,
+  &--download:focus {
+    color: @pink;
+
+    border-color: @white;
+    background-color: @white;
+  }
+
+  &--download:active {
+    color: @transparent-pink;
+
+    border-color: @white;
+    background-color: @white;
+  }
+
   &--slider-toggle {
     position: relative;
     width: 6px;
     height: 6px;
     padding: 0;
 
-    background-color: @dark-gray;
+    background-color: @gray;
     border: none;
     border-radius: 50%;
     margin: 9px;
   }
 
-  &--slider-toggle:hover::after,
-  &--slider-toggle:focus::after {
+  &--slider-toggle:hover,
+  &--slider-toggle:focus {
+    background-color: @dark-gray;
+  }
+
+  &--slider-toggle:active {
+    background-color: @light-gray;
+  }
+
+  &--slider-toggle:active::after {
     content: "";
     position: absolute;
     top: -3px;
@@ -66,20 +89,20 @@
     border-radius: 0;
   }
 
+  &--active {
+    fill: @pink;
+  }
+
   &--post {
+    width: 280px;
     color: @pink;
     border-color: @pink;
-
-    margin-top: 6px;
-    margin-bottom: 6px;
   }
 
   &--cancel {
+    width: 280px;
     color: @gray;
     border-color: @gray;
-
-    margin-top: 6px;
-    margin-bottom: 6px;
   }
 
   &--send-form,
@@ -102,6 +125,40 @@
     &:active {
       color: @transparent-pink;
     }
+
+    &:disabled {
+      color: @white;
+      background-color: @gray;
+    }
+  }
+}
+
+.btn__icon {
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 1;
+    fill: @pink;
+  }
+
+  &--crop {
+    opacity: 1;
+    width: 44px;
+    height: 44px;
+  }
+
+  &--fill {
+    width: 48px;
+    height: 43px;
+  }
+
+  &--contrast {
+    width: 32px;
+    height: 32px;
   }
 }
 
@@ -121,6 +178,30 @@
 
     &--send-form {
       width: 300px;
+    }
+
+    &--crop,
+    &--fill,
+    &--contrast {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .btn__icon {
+    &--crop {
+      width: 22px;
+      height: 22px;
+    }
+
+    &--fill {
+      width: 25px;
+      height: 25px;
+    }
+
+    &--contrast {
+      width: 16px;
+      height: 16px;
     }
   }
 }

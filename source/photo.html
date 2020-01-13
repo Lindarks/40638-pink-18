@@ -58,7 +58,7 @@
           </picture>
           <div class="daily-special__inner-wrapper">
             <cite class="daily-special__author">Анна <span>(5 минут назад)</span></cite>
-            <p class="daily-special__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+            <p class="daily-special__description">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
             <b class="daily-special__reaction">
               <svg class="daily-special__reaction-icon" width="13" height="12">
                 <use xlink:href="img/sprite.svg#reaction-icon"></use>
@@ -184,43 +184,66 @@
             </div>
           </div>
         </div>
-        <p class="photo-gallery__title">Затмите их всех! <br>
-          Выкладывайте все, что накопилось в телефоне!</p>
+        <p class="photo-gallery__title">Затмите их всех! <span>Выкладывайте все, что накопилось в телефоне!</span></p>
       </section>
       <section class="page-main__photo-editor photo-editor">
         <div class="photo-editor__container">
-          <div class="photo-editor__wrapper">
-            <div class="photo-editor__wrapper-inner">
-              <picture>
-                <source type="image/webp" media="(min-width:1200px)" srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width:660px)" srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/photo-road-mobile@1x.webp 1x, img/photo-road-mobile@2x.webp 2x">
-                <source media="(min-width:1200px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
-                <source media="(min-width:660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
-                <img class="photo-editor__picture" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@1x.jpg 1x, img/photo-road-mobile@2x.jpg 2x" width="280" height="374" alt="Редактируемое фото">
-              </picture>
-            </div>
-            <div class="photo-editor__wrapper-inner">
-              <div class="photo-editor__btn-group1">
-                <button class="btn btn--crop">
-                  <svg class="photo-editor__icon" width="44" height="44">
-                    <use xlink:href="img/sprite.svg#crop-icon"></use>
-                  </svg>
-                </button>
-                <button class="btn btn--fill">
-                  <svg class="photo-editor__icon" width="48" height="43">
-                    <use xlink:href="img/sprite.svg#fill-icon"></use>
-                  </svg>
-                </button>
-                <button class="btn btn--contrast">
-                  <svg class="photo-editor__icon" width="32" height="32">
-                    <use xlink:href="img/sprite.svg#contrast-icon"></use>
-                  </svg>
-                </button>
+          <div class="photo-editor__wrapper photo-editor__wrapper--image">
+            <picture>
+              <source type="image/webp" media="(min-width:1200px)" srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width:660px)" srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-road-mobile@1x.webp 1x, img/photo-road-mobile@2x.webp 2x">
+              <source media="(min-width:1200px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+              <source media="(min-width:660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+              <img class="photo-editor__picture" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@1x.jpg 1x, img/photo-road-mobile@2x.jpg 2x" width="280" height="374" alt="Редактируемое фото">
+            </picture>
+          </div>
+          <div class="photo-editor__wrapper photo-editor__wrapper--controls">
+            <div class="photo-editor__wrapper-inner photo-editor__wrapper-inner--controls">
+              <div class="photo-editor__edit-btn-group">
+                <div class="photo-editor__btn-group">
+                  <button class="btn btn--crop btn--active">
+                    <svg class="btn__icon btn__icon--crop" width="46" height="48">
+                      <use xlink:href="img/sprite.svg#crop-icon"></use>
+                    </svg>
+                  </button>
+                  <div class="photo-editor__edit-range-group photo-editor__edit-range-group--crop">
+                    <div class="photo-editor__range"></div>
+                    <div class="photo-editor__toggle photo-editor__toggle--crop"></div>
+                  </div>
+                </div>
+                <div class="photo-editor__btn-group">
+                  <button class="btn btn--fill">
+                    <svg class="btn__icon btn__icon--fill" width="48" height="43">
+                      <use xlink:href="img/sprite.svg#fill-icon"></use>
+                    </svg>
+                  </button>
+                  <div class="photo-editor__edit-range-group photo-editor__edit-range-group--fill">
+                    <div class="photo-editor__range"></div>
+                    <div class="photo-editor__toggle photo-editor__toggle--fill"></div>
+                  </div>
+                </div>
+                <div class="photo-editor__btn-group">
+                  <button class="btn btn--contrast">
+                    <svg class="btn__icon btn__icon--contrast" width="32" height="32">
+                      <use xlink:href="img/sprite.svg#contrast-icon"></use>
+                    </svg>
+                  </button>
+                  <div class="photo-editor__edit-range-group photo-editor__edit-range-group--contrast">
+                    <div class="photo-editor__range"></div>
+                    <div class="photo-editor__toggle photo-editor__toggle--contrast"></div>
+                  </div>
+                </div>
               </div>
-              <div class="photo-editor__btn-group2">
-                <button class="btn btn--post">Запостить</button>
-                <button class="btn btn--cancel">Отмена</button>
+              <div class="photo-editor__edit-range-group photo-editor__edit-range-group--standalone">
+                <div class="photo-editor__range"></div>
+                <div class="photo-editor__toggle"></div>
+              </div>
+            </div>
+            <div class="photo-editor__wrapper-inner photo-editor__wrapper-inner--buttons">
+              <div class="photo-editor__control-btn-group">
+                <button class="photo-editor__btn btn btn--post">Запостить</button>
+                <button class="photo-editor__btn btn btn--cancel">Отмена</button>
               </div>
             </div>
           </div>

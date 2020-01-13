@@ -135,6 +135,10 @@
   border-color: @navy;
 }
 
+.user-challenge__item input[type="checkbox"]:active + .checkbox-indicator {
+  border-color: @pink;
+}
+
 .user-challenge__item input[type="checkbox"]:checked + .checkbox-indicator::before {
   content: "";
 
@@ -190,6 +194,10 @@
 .user-app__item input[type="radio"]:hover + .radio-indicator,
 .user-app__item input[type="radio"]:focus + .radio-indicator {
   border-color: @navy;
+}
+
+.user-app__item input[type="radio"]:active + .radio-indicator {
+  border-color: @pink;
 }
 
 .user-app__item input[type="radio"]:checked + .radio-indicator::after {
