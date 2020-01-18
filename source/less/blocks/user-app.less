@@ -1,0 +1,99 @@
+.user-app__legend {
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.user-app__list {
+  .list-reset();
+}
+
+.user-app__item {
+  position: relative;
+  padding-left: 69px;
+  padding-top: 26px;
+  padding-bottom: 20px;
+}
+
+.user-app__item label {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.user-app__item input[type="radio"] + .radio-indicator {
+  position: absolute;
+  left: 1px;
+  top: 23px;
+
+  box-sizing: border-box;
+  width: 38px;
+  height: 38px;
+
+  background-color: @white;
+  border: 2px solid @gray;
+  border-radius: 50%;
+}
+
+.user-app__item input[type="radio"]:hover + .radio-indicator,
+.user-app__item input[type="radio"]:focus + .radio-indicator {
+  border-color: @navy;
+}
+
+.user-app__item input[type="radio"]:active + .radio-indicator {
+  border-color: @pink;
+}
+
+.user-app__item input[type="radio"]:checked + .radio-indicator::after {
+  content: "";
+
+  position: absolute;
+  left: 9px;
+  top: 9px;
+
+  width: 15px;
+  height: 15px;
+  background-color: @pink;
+  border-radius: 50%;
+}
+
+.user-app__item input[type="radio"]:disabled + .radio-indicator {
+  border-color: @gray;
+}
+
+.user-app__item input[type="radio"]:checked:disabled + .radio-indicator::after {
+  background-color: @gray;
+}
+
+@media (min-width: @tablet-width) {
+  .user-app__list {
+    padding-left: 44px;
+    padding-bottom: 52px;
+  }
+
+  .user-app__item {
+    padding-left: 74px;
+    padding-top: 37px;
+    padding-bottom: 8px;
+  }
+
+  .user-app__item input[type="radio"] + .radio-indicator {
+    left: 14px;
+    top: 34px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-app__list {
+    padding-left: 63px;
+    padding-bottom: 0;
+  }
+
+  .user-app__item {
+    padding-left: 72px;
+    padding-top: 39px;
+    padding-bottom: 5px;
+
+    &:last-child {
+      padding-bottom: 60px;
+    }
+  }
+}

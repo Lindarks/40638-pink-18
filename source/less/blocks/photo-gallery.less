@@ -3,26 +3,36 @@
 }
 
 .photo-gallery__inner-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  &--picture {
+    width: 280px;
+    cursor: pointer;
+  }
 
-  padding-left: 18px;
-  padding-top: 11px;
-  padding-bottom: 20px;
+  &--text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding-left: 18px;
+    padding-top: 11px;
+    padding-bottom: 20px;
+  }
 }
 
 .photo-gallery__title {
   text-align: center;
   line-height: 30px;
 
-  padding-left: 34px;
-  padding-right: 34px;
-  padding-top: 46px;
-  padding-bottom: 48px;
   margin: 0;
 
-  &:nth-of-type(2) {
+  &--first {
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-top: 46px;
+    padding-bottom: 48px;
+  }
+
+  &--second {
     padding-left: 27px;
     padding-right: 31px;
     padding-top: 3px;
@@ -95,10 +105,13 @@
 
     width: 570px;
     margin: 0 auto;
-    padding-top: 92px;
-    padding-bottom: 76px;
 
-    &:nth-of-type(2) {
+    &--first {
+      padding-top: 92px;
+      padding-bottom: 76px;
+    }
+
+    &--second {
       padding-top: 25px;
       padding-bottom: 70px;
     }
@@ -130,12 +143,18 @@
   }
 
   .photo-gallery__inner-wrapper {
-    display: flex;
-    flex-direction: column;
+    &--picture {
+      width: 300px;
+    }
 
-    min-height: 110px; /* Из общей высоты вычтены паддинги контейнера */
-    padding-top: 17px;
-    padding-left: 28px;
+    &--text {
+      display: flex;
+      flex-direction: column;
+
+      min-height: 110px; /* Из общей высоты вычтены паддинги контейнера */
+      padding-top: 17px;
+      padding-left: 28px;
+    }
   }
 
   .photo-gallery__reaction {
@@ -151,10 +170,22 @@
 }
 
 @media (min-width: @desktop-width) {
+  .photo-gallery__inner-wrapper {
+    &--text {
+      padding-right: 5px;
+    }
+  }
+
   .photo-gallery__title {
-    &:nth-of-type(2) {
-      padding-top: 6px;
-      padding-bottom: 65px;
+    &--first {
+      width: 620px;
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+
+    &--second {
+      padding-top: 7px;
+      padding-bottom: 66px;
     }
   }
 

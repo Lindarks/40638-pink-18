@@ -1,22 +1,39 @@
+.slider__control {
+  display: none;
+}
+
 .slider__control-icon {
   display: none;
 }
 
 @media (min-width: @desktop-width) {
-  .slider__control-icon {
+  .slider__control {
     display: inline-block;
     position: absolute;
-    fill: @navy;
-    opacity: 0.3;
 
     &--left {
-      top: 213px;
-      left: 0;
+      top: 200px;
+      left: -6px;
     }
 
     &--right {
-      top: 213px;
+      top: 200px;
       right: 0;
+    }
+  }
+
+  .slider__control-icon {
+    display: inline-block;
+    fill: @navy;
+    opacity: 0.3;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
     }
   }
 }

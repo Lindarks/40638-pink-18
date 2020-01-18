@@ -72,8 +72,8 @@
   }
 
   &--slider-control {
-    width: 22px;
-    height: 41px;
+    width: 30px;
+    height: 70px;
     background-color: transparent;
     border: none;
   }
@@ -97,19 +97,44 @@
     width: 280px;
     color: @pink;
     border-color: @pink;
+
+    &:hover,
+    &:focus {
+      color: @white;
+      background-color: @pink;
+    }
+
+    &:active {
+      color: @transparent-white;
+      background-color: @pink;
+    }
   }
 
   &--cancel {
     width: 280px;
-    color: @gray;
-    border-color: @gray;
+    color: @super-transparent-navy;
+    border-color: @super-transparent-navy;
+
+    &:hover,
+    &:focus {
+      color: @transparent-navy;
+      border-color: @transparent-navy;
+    }
+
+    &:active {
+      color: @transparent-white;
+      border-color: #b5b9be;
+      background-color: @transparent-navy;
+    }
   }
 
   &--send-form,
-  &--modal {
+  &--modal,
+  &--close {
     text-transform: uppercase;
     color: @white;
 
+    width: 280px;
     padding-top: 22px;
     padding-bottom: 23px;
 
@@ -123,7 +148,7 @@
     }
 
     &:active {
-      color: @transparent-pink;
+      color: @transparent-white;
     }
 
     &:disabled {
@@ -135,20 +160,25 @@
 
 .btn__icon {
   opacity: 0.3;
+  fill: @dark-gray;
+  color: @dark-gray;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.5;
+    fill: @dark-gray;
+    color: @dark-gray;
   }
 
-  &:active {
+  &--active {
     opacity: 1;
     fill: @pink;
+    color: @pink;
   }
 
   &--crop {
-    opacity: 1;
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
   }
 
   &--fill {
@@ -168,15 +198,13 @@
       width: 294px;
     }
 
-    &--post {
-      width: 260px;
-    }
-
+    &--post,
     &--cancel {
       width: 260px;
     }
 
-    &--send-form {
+    &--send-form,
+    &--modal {
       width: 300px;
     }
 
@@ -189,6 +217,10 @@
   }
 
   .btn__icon {
+    fill: @pink;
+    color: @pink;
+    opacity: 1;
+
     &--crop {
       width: 22px;
       height: 22px;
@@ -210,6 +242,33 @@
   .btn {
     &--download {
       font-size: 21px;
+    }
+
+    &--post,
+    &--cancel {
+      width: 184px;
+    }
+
+    &--close {
+      width: 460px;
+    }
+  }
+
+  .btn__icon {
+    &--crop {
+      width: 44px;
+      height: 44px;
+    }
+
+    &--fill {
+      width: 48px;
+      height: 48px;
+    }
+
+    &--contrast {
+      padding-left: 6px;
+      width: 32px;
+      height: 32px;
     }
   }
 }

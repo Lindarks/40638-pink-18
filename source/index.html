@@ -11,15 +11,24 @@
   <body>
     <header class="page-header">
       <nav class="main-nav main-nav--open">
+      <!--Класс .main-nav--open определяет стили при открытом меню в мобильной и планшетной версиях, класс .main-nav--closed - при закрытом-->
         <div class="main-nav__wrapper">
           <div class="main-nav__top-block">
             <div class="main-nav__top-block-container">
-              <a class="main-nav__logo">
-                <picture>
-                  <source media="(min-width:1200px)" srcset="img/logo-pink-white-desktop.svg">
-                  <source media="(min-width:660px)" srcset="img/logo-pink-white-tablet.svg">
-                  <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип приложения PINK">
-                </picture>
+              <a class="main-nav__logo main-nav__logo--mobile" aria-label="Логотип приложения PINK">
+                <svg class="main-nav__logo-image" width="75" height="22">
+                  <use xlink:href="img/sprite.svg#mobile-logo"></use>
+                </svg>
+              </a>
+              <a class="main-nav__logo main-nav__logo--tablet" aria-label="Логотип приложения PINK">
+                <svg class="main-nav__logo-image" width="147" height="40">
+                  <use xlink:href="img/sprite.svg#tablet-logo"></use>
+                </svg>
+              </a>
+              <a class="main-nav__logo main-nav__logo--desktop" aria-label="Логотип приложения PINK">
+                <svg class="main-nav__logo-image" width="147" height="40">
+                  <use xlink:href="img/sprite.svg#desktop-logo"></use>
+                </svg>
               </a>
               <button class="main-nav__toggle" type="button" aria-label="Меню"></button>
             </div>
@@ -158,12 +167,12 @@
               <button class="btn btn--slider-toggle slider__toggle" type="button"></button>
             </div>
             <div class="review__controls slider__controls">
-              <button class="btn btn--slider-control slider__control" type="button">
+              <button class="btn btn--slider-control slider__control slider__control--left" type="button">
                 <svg class="slider__control-icon slider__control-icon--left" width="22" height="41">
                   <use xlink:href="img/sprite.svg#arrow-left-icon"></use>
                 </svg>
               </button>
-              <button class="btn btn--slider-control slider__control" type="button">
+              <button class="btn btn--slider-control slider__control slider__control--right" type="button">
                 <svg class="slider__control-icon slider__control-icon--right" width="22" height="41">
                   <use xlink:href="img/sprite.svg#arrow-right-icon"></use>
                 </svg>
@@ -274,27 +283,41 @@
             </div>
             <div class="contacts__item contacts__item--email">
               <b class="contacts__option-name">Пишите:</b>
-              <p class="contacts__option-text">mail@htmlacademy.ru</p>
+              <p class="contacts__option-text contacts__option-text--email">mail@htmlacademy.ru</p>
             </div>
             <div class="contacts__item contacts__item--address">
               <b class="contacts__option-name">Приезжайте в гости:</b>
               <address class="contacts__option-text">ул. Большая Конюшенная, 19/8</address>
             </div>
           </div>
-          <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253323!2d30.320858716389655!3d59.93871648187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sae!4v1558353655964!5m2!1sru!2sae">
-            </iframe>
-            <img class="map-picture" src="img/bg-map-mobile@1x.png" width="320px" height="645px" alt="Как до нас добраться">
-          </div>
-        </div>
+      </div>
+    </div>
+    <div class="map">
+      <div class="map__wrapper">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253323!2d30.320858716389655!3d59.93871648187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sae!4v1558353655964!5m2!1sru!2sae">
+        </iframe>
+        <picture>
+          <source type="image/webp" media="(min-width:1200px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width:660px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+          <source media="(min-width:1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+          <source media="(min-width:660px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+          <img class="map__picture" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@1x.png 1x, img/bg-map-mobile@2x.jpg 2x" alt="Редактируемое фото">
+        </picture>
+      </div>
     </div>
     </footer>
-    <footer class="page-footer social-copyright page-footer--index">
+    <footer class="page-footer page-footer--index social-copyright">
       <div class="social-copyright__container social-copyright__container--index">
         <div class="social-copyright__wrapper">
-            <a class="social-copyright__logo">
+            <a class="social-copyright__logo social-copyright__logo--mobile" href="index.html" aria-label="Логотип приложения PINK">
               <svg class="social-copyright__logo-image" width="147" height="40">
                 <use xlink:href="img/sprite.svg#pink-footer-logo"></use>
+              </svg>
+            </a>
+            <a class="social-copyright__logo social-copyright__logo--desktop" href="index.html" aria-label="Логотип приложения PINK">
+              <svg class="social-copyright__logo-image" width="147" height="40">
+                <use xlink:href="img/sprite.svg#pink-footer-logo-desktop"></use>
               </svg>
             </a>
             <div class="social-copyright__social social">
@@ -318,7 +341,7 @@
             <div class="social-copyright__copyright copyright">
               <b class="copyright__title">Разработано</b>
               <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-                <svg class="social-copyright__link-image" width="27" height="34">
+                <svg class="copyright__link-image" width="27" height="34">
                   <use xlink:href="img/sprite.svg#html-academy-logo"></use>
                 </svg>
               </a>

@@ -1,0 +1,139 @@
+.user-contacts__legend {
+  display: none;
+}
+
+.user-contacts__list {
+  .list-reset();
+}
+
+.user-contacts__item {
+  position: relative;
+  margin: 0;
+  padding-bottom: 8px;
+
+  &--active input[type="text"],
+  &--active input[type="email"],
+  &--active input[type="tel"] {
+    border-color: @pink;
+  }
+}
+
+.user-contacts__item-image {
+  display: none;
+}
+
+.user-contacts label {
+  display: block;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: @pink;
+
+  padding-left: 22px;
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
+
+.user-contacts__warning {
+  outline: 2px solid @pink;
+}
+
+@media (min-width: @tablet-width) {
+  .user-contacts__legend {
+    display: block;
+  }
+
+  .user-contacts__list {
+    padding-top: 10px;
+    padding-bottom: 26px;
+  }
+
+  .user-contacts__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 26px;
+    padding-left: 58px;
+    padding-bottom: 0;
+  }
+
+  .user-contacts__item-image {
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+
+    top: 50px;
+    right: 80px;
+  }
+
+  .user-contacts__item svg {
+    fill: @pink;
+  }
+
+  .user-contacts__item label {
+    padding-top: 7px;
+    padding-left: 20px;
+    padding-bottom: 3px;
+  }
+
+  .user-contacts__item input[type="text"],
+  .user-contacts__item input[type="email"],
+  .user-contacts__item input[type="tel"] {
+    order: -1;
+    width: 500px;
+  }
+
+  .user-contacts__item span {
+    position: absolute;
+    top: 28px;
+    right: 60px;
+    width: 62px;
+    height: 61px;
+
+    background-color: @gray;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-contacts__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+
+  .user-contacts__item {
+    padding-top: 22px;
+    padding-left: 0;
+    width: 46.5%;
+
+    &:nth-of-type(2n-1) {
+      padding-left: 57px;
+    }
+
+    &::after {
+      top: 35px;
+    }
+  }
+
+  .user-contacts__item-image {
+    top: 46px;
+  }
+
+  .user-contacts__item label {
+    padding-top: 10px;
+  }
+
+  .user-contacts__item input[type="text"],
+  .user-contacts__item input[type="email"],
+  .user-contacts__item input[type="tel"] {
+    order: -1;
+    width: 378px;
+  }
+
+  .user-contacts__item span {
+    top: 24px;
+    right: 59px;
+  }
+}

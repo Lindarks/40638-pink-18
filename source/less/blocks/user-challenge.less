@@ -1,0 +1,112 @@
+.user-challenge__list {
+  .list-reset();
+}
+
+.user-challenge__item {
+  position: relative;
+  padding-left: 69px;
+  padding-top: 45px;
+  padding-bottom: 7px;
+}
+
+.user-challenge__item label {
+  display: block;
+
+  font-size: 18px;
+  line-height: 30px;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.user-challenge__item input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  left: 0;
+  top: 40px;
+
+  box-sizing: border-box;
+  width: 38px;
+  height: 38px;
+
+  background-color: @white;
+  border: 2px solid @gray;
+}
+
+.user-challenge__item input[type="checkbox"]:hover + .checkbox-indicator,
+.user-challenge__item input[type="checkbox"]:focus + .checkbox-indicator {
+  border-color: @navy;
+}
+
+.user-challenge__item input[type="checkbox"]:active + .checkbox-indicator {
+  border-color: @pink;
+}
+
+.user-challenge__item input[type="checkbox"]:checked + .checkbox-indicator::before {
+  content: "";
+
+  position: absolute;
+  left: 20px;
+  top: 7px;
+  transform: rotate(45deg);
+
+  width: 2px;
+  height: 20px;
+  background-color: @pink;
+}
+
+.user-challenge__item input[type="checkbox"]:checked + .checkbox-indicator::after {
+  content: "";
+
+  position: absolute;
+  left: 10px;
+  top: 16px;
+  transform: rotate(-45deg);
+
+  width: 2px;
+  height: 10px;
+  background-color: @pink;
+}
+
+.user-challenge__item input[type="checkbox"]:disabled + .checkbox-indicator {
+  border-color: @gray;
+}
+
+.user-challenge__item input[type="checkbox"]:checked:disabled + .checkbox-indicator::before,
+.user-challenge__item input[type="checkbox"]:checked:disabled + .checkbox-indicator::after {
+  background-color: @gray;
+}
+
+@media (min-width: @tablet-width) {
+  .user-challenge__list {
+    padding-left: 58px;
+    padding-bottom: 49px;
+  }
+
+  .user-challenge__item {
+    padding-left: 60px;
+    padding-top: 47px;
+    padding-bottom: 5px;
+  }
+
+  .user-challenge__item input[type="checkbox"] + .checkbox-indicator {
+    left: 0;
+    top: 44px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-challenge__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 169px;
+
+    padding-left: 58px;
+    padding-bottom: 51px;
+  }
+
+  .user-challenge__item {
+    padding-left: 58px;
+    padding-top: 47px;
+  }
+}
