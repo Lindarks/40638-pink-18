@@ -1,7 +1,7 @@
 .main-nav {
   &--open {
     position: relative;
-    margin-bottom: -70px;
+    margin-bottom: -68px;
   }
 
   &--open .main-nav__top-block { /* Верхний НЕпрозрачный блок с логотипом при открытом меню на мобильной ширине*/
@@ -67,7 +67,7 @@
 
   &--closed .main-nav__top-block { /* Верхний ПРОЗРАЧНЫЙ блок с логотипом при открытом меню на мобильной ширине*/
     padding-top: 22px;
-    padding-bottom: 16px;
+    padding-bottom: 21px;
 
     background-color: rgba(0, 0, 0, 0.3);
     border: none;
@@ -182,6 +182,10 @@
     }
   }
 
+  .main-nav__wrapper {
+    width: 100%;
+  }
+
   .main-nav__logo {
     width: 147px;
     height: 40px;
@@ -220,7 +224,9 @@
   }
 
   .main-nav__wrapper {
-    .container() ;
+    width: 94%; /*Тут должен был быть миксин .container, но он некорректно работает для этого элемента в IE11, пришлось писать вот так*/
+    margin: 0 auto;
+    max-width: 940px;
     display: flex;
     flex-direction: row;
   }

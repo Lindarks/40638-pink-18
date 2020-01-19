@@ -1,19 +1,8 @@
 var navMain = document.querySelector(".main-nav");
 var navToggle = document.querySelector(".main-nav__toggle");
 
-var form = document.querySelector(".contest__form");
-var userFirstName = form.querySelector(".user-info__first-name");
-var userLastName = form.querySelector(".user-info__last-name");
-var userEmail = form.querySelector(".user-contacts__email");
-
-var errorPopup = document.querySelector(".modal--form-error");
-var confirmPopup = document.querySelector(".modal--form-confirmation");
-
-var closeErrorPopup = errorPopup.querySelector(".btn--modal");
-var closeConfirmPopup = confirmPopup.querySelector(".btn--modal");
-var popup = document.querySelector(".modal");
-
-var toggle = document.querySelector(".btn--slider-toggle");
+//Показываем кнопку меню, если есть JS
+navMain.classList.remove("main-nav--nojs");
 
 //Закрываем и открываем меню нажатием на бургер/крестик
 navToggle.addEventListener("click", function() {
@@ -26,7 +15,21 @@ navToggle.addEventListener("click", function() {
   }
 });
 
-//Закрываем окна нажатием кнопки
+//Работа с формой
+if (document.querySelector(".contest__form")) {
+
+var form = document.querySelector(".contest__form");
+var userFirstName = form.querySelector(".user-info__first-name");
+var userLastName = form.querySelector(".user-info__last-name");
+var userEmail = form.querySelector(".user-contacts__email");
+
+var errorPopup = document.querySelector(".modal--form-error");
+var confirmPopup = document.querySelector(".modal--form-confirmation");
+
+var closeErrorPopup = errorPopup.querySelector(".btn--modal");
+var closeConfirmPopup = confirmPopup.querySelector(".btn--modal");
+
+//Проверяем не пустые ли поля
 form.addEventListener("submit", function (evt) {
   evt.preventDefault();
   if (!userFirstName.value || !userLastName.value || !userEmail.value) {
@@ -37,17 +40,19 @@ form.addEventListener("submit", function (evt) {
   } else confirmPopup.classList.add("modal--show");
 });
 
+//Закрываем одну модалку
 closeErrorPopup.addEventListener("click", function(evt) {
   evt.preventDefault();
   errorPopup.classList.toggle("modal--show");
 });
 
+//Закрываем вторую модалку
 closeConfirmPopup.addEventListener("click", function(evt) {
   evt.preventDefault();
   confirmPopup.classList.toggle("modal--show");
 });
 
-//Закрываем все окна по нажатию ESC
+//Закрываем любую модалку по нажатию ESC
   document.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
       evt.preventDefault();
@@ -55,4 +60,5 @@ closeConfirmPopup.addEventListener("click", function(evt) {
       confirmPopup.classList.remove("modal--show");
     };
   });
+};
 

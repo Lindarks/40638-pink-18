@@ -61,11 +61,12 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  text-align: center;
+  text-align: center; /*Центрирование легенд формы в IE11*/
   color: @pink;
 
   padding-left: 20px;
   padding-right: 20px;
+  margin: 0 auto; /*Центрирование легенд формы в остальных браузерах*/
 }
 
 .contest__fieldset {

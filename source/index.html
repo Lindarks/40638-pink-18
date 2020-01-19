@@ -10,7 +10,7 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav main-nav--open">
+      <nav class="main-nav main-nav--open main-nav--nojs">
       <!--Класс .main-nav--open определяет стили при открытом меню в мобильной и планшетной версиях, класс .main-nav--closed - при закрытом-->
         <div class="main-nav__wrapper">
           <div class="main-nav__top-block">
@@ -34,7 +34,7 @@
             </div>
           </div>
           <ul class="main-nav__list site-navigation-list">
-            <li class="site-navigation-list__item">
+            <li class="site-navigation-list__item site-navigation-list__item--active">
               <a class="site-navigation-list__link">Главная</a>
             </li>
             <li class="site-navigation-list__item">
@@ -127,7 +127,7 @@
             </div>
             <div class="research__info">
               <h3 class="research__title">Эффект <span>на 24 часа!</span></h3>
-              <p class="research__description">Британские ученые провели исследования и доказали, <i>что положительный эффект <b>от использования приложения <span>длится целые сутки!</span></b></i></p>
+              <p class="research__description">Британские ученые провели исследования и доказали, <span class="research__description-detail1">что положительный эффект <span class="research__description-detail2">от использования приложения <span class="research__description-detail3">длится целые сутки!</span></span></span></p>
               <a class="research__link" href="#">Узнать больше об исследовании</a>
             </div>
           </div>
@@ -350,5 +350,6 @@
       </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/svgxuse.min.js"></script>
   </body>
 </html>
