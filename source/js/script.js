@@ -61,4 +61,3 @@ closeConfirmPopup.addEventListener("click", function(evt) {
     };
   });
 };
-
