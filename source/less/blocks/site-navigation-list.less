@@ -44,6 +44,24 @@
     background-color: transparent;
   }
 
+  .site-navigation-list__item {
+    position: relative;
+    margin-left: 85px;
+
+    &--active::after {
+      content: "";
+      position: absolute;
+
+      left: 0;
+      right: 0;
+      bottom: 34px;
+
+      height: 2px;
+
+      background-color: @white;
+    }
+  }
+
   .site-navigation-list__link {
     font-size: 18px;
     line-height: 18px;
@@ -51,13 +69,12 @@
     text-transform: none;
 
     border: none;
-    margin-left: 85px;
+    padding-left: 0;
     padding-top: 45px;
-    padding-bottom: 7px;
-  }
+    padding-bottom: 42px;
 
-  .site-navigation-list__link:active {
-    border-bottom: 2px solid @white;
-    margin-bottom: 39px;
+    &:active {
+      color: @transparent-white;
+    }
   }
 }

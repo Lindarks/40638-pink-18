@@ -3,40 +3,59 @@
 }
 
 .photo-gallery__inner-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  &--picture {
+    display: block;
+    width: 280px;
+    height: 180px;
+    cursor: pointer;
+  }
 
-  padding-left: 18px;
-  padding-top: 12px;
-  padding-bottom: 20px;
+  &--text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding-left: 18px;
+    padding-top: 18px;
+    padding-bottom: 20px;
+  }
 }
 
 .photo-gallery__title {
   text-align: center;
   line-height: 30px;
 
-  padding-left: 34px;
-  padding-right: 34px;
-  padding-top: 46px;
-  padding-bottom: 48px;
   margin: 0;
 
-  &:nth-of-type(2) {
+  &--first {
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-top: 46px;
+    padding-bottom: 48px;
+  }
+
+  &--second {
+    padding-left: 27px;
+    padding-right: 31px;
     padding-top: 3px;
     padding-bottom: 42px;
   }
 }
 
+.photo-gallery__title span {
+  display: block;
+}
+
 .photo-gallery__list {
-  padding-top: 20px;
+  padding-top: 22px;
   padding-bottom: 20px;
 }
 
 .photo-gallery__item {
+  width: 280px;
   margin-left: 20px;
   margin-right: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 
   background-color: @light-gray;
 }
@@ -87,12 +106,15 @@
   .photo-gallery__title {
     font-size: 18px;
 
-    width: 605px;
+    width: 566px;
     margin: 0 auto;
-    padding-top: 93px;
-    padding-bottom: 87px;
 
-    &:nth-of-type(2) {
+    &--first {
+      padding-top: 92px;
+      padding-bottom: 76px;
+    }
+
+    &--second {
       padding-top: 25px;
       padding-bottom: 70px;
     }
@@ -124,12 +146,20 @@
   }
 
   .photo-gallery__inner-wrapper {
-    display: flex;
-    flex-direction: column;
+    &--picture {
+      width: 300px;
+      height: 300px;
+    }
 
-    min-height: 110px; /* Из общей высоты вычтены паддинги контейнера */
-    padding-top: 17px;
-    padding-left: 28px;
+    &--text {
+      display: flex;
+      flex-direction: column;
+
+      min-height: 110px; /* Из общей высоты вычтены паддинги контейнера */
+      padding-top: 24px;
+      padding-left: 28px;
+      padding-right: 5px;
+    }
   }
 
   .photo-gallery__reaction {
@@ -137,13 +167,34 @@
     padding-left: 0;
     padding-top: 12px;
   }
+
+  .photo-gallery__reaction-icon {
+    top: 16px;
+    left: 227px;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .photo-gallery__inner-wrapper {
+    &--picture {
+      height: 400px;
+    }
+
+    &--text {
+      padding-right: 5px;
+    }
+  }
+
   .photo-gallery__title {
-    &:nth-of-type(2) {
-      padding-top: 6px;
-      padding-bottom: 65px;
+    &--first {
+      width: 620px;
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+
+    &--second {
+      padding-top: 7px;
+      padding-bottom: 66px;
     }
   }
 

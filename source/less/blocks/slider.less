@@ -1,3 +1,39 @@
-.slider {
-  font-family: "Open Sans", "Arial", sans-serif; /*Добавила, чтобы Тревис не ругался на пустой блок*/
+.slider__control {
+  display: none;
+}
+
+.slider__control-icon {
+  display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .slider__control {
+    display: inline-block;
+    position: absolute;
+
+    &--left {
+      top: 200px;
+      left: -6px;
+    }
+
+    &--right {
+      top: 200px;
+      right: 0;
+    }
+  }
+
+  .slider__control-icon {
+    display: inline-block;
+    fill: @navy;
+    opacity: 0.3;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
 }

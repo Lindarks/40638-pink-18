@@ -4,9 +4,9 @@
   font-weight: 700;
   text-align: center;
 
-  width: 280px;
-  padding-top: 13px;
-  padding-bottom: 16px;
+  width: 274px;
+  padding-top: 14px;
+  padding-bottom: 17px;
 
   background-color: transparent;
 
@@ -21,15 +21,61 @@
     border-color: @white;
   }
 
+  &--download:hover,
+  &--download:focus {
+    color: @pink;
+
+    border-color: @white;
+    background-color: @white;
+  }
+
+  &--download:active {
+    color: @transparent-pink;
+
+    border-color: @white;
+    background-color: @white;
+  }
+
   &--slider-toggle {
+    position: relative;
     width: 6px;
     height: 6px;
     padding: 0;
 
-    background-color: @dark-gray;
+    background-color: @gray;
     border: none;
     border-radius: 50%;
     margin: 9px;
+  }
+
+  &--slider-toggle:hover,
+  &--slider-toggle:focus {
+    background-color: @dark-gray;
+  }
+
+  &--slider-toggle:active {
+    background-color: @light-gray;
+  }
+
+  &--slider-toggle:active::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+
+    width: 6px;
+    height: 6px;
+
+    background-color: @dark-gray;
+    border: 3px solid @navy;
+    border-radius: 50%;
+  }
+
+  &--slider-control {
+    width: 30px;
+    height: 70px;
+    background-color: transparent;
+    border: none;
   }
 
   &--crop,
@@ -43,26 +89,52 @@
     border-radius: 0;
   }
 
+  &--active {
+    fill: @pink;
+  }
+
   &--post {
+    width: 280px;
     color: @pink;
     border-color: @pink;
 
-    margin-top: 6px;
-    margin-bottom: 6px;
+    &:hover,
+    &:focus {
+      color: @white;
+      background-color: @pink;
+    }
+
+    &:active {
+      color: @transparent-white;
+      background-color: @pink;
+    }
   }
 
   &--cancel {
-    color: @gray;
-    border-color: @gray;
+    width: 280px;
+    color: @super-transparent-navy;
+    border-color: @super-transparent-navy;
 
-    margin-top: 6px;
-    margin-bottom: 6px;
+    &:hover,
+    &:focus {
+      color: @transparent-navy;
+      border-color: @transparent-navy;
+    }
+
+    &:active {
+      color: @transparent-white;
+      border-color: #b5b9be;
+      background-color: @transparent-navy;
+    }
   }
 
-  &--send-form {
+  &--send-form,
+  &--modal,
+  &--close {
     text-transform: uppercase;
     color: @white;
 
+    width: 280px;
     padding-top: 22px;
     padding-bottom: 23px;
 
@@ -76,8 +148,47 @@
     }
 
     &:active {
-      color: @transparent-pink;
+      color: @transparent-white;
     }
+
+    &:disabled {
+      color: @white;
+      background-color: @gray;
+    }
+  }
+}
+
+.btn__icon {
+  opacity: 0.3;
+  fill: @dark-gray;
+  color: @dark-gray;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+    fill: @dark-gray;
+    color: @dark-gray;
+  }
+
+  &--active {
+    opacity: 1;
+    fill: @pink;
+    color: @pink;
+  }
+
+  &--crop {
+    width: 48px;
+    height: 48px;
+  }
+
+  &--fill {
+    width: 48px;
+    height: 43px;
+  }
+
+  &--contrast {
+    width: 32px;
+    height: 32px;
   }
 }
 
@@ -87,12 +198,77 @@
       width: 294px;
     }
 
-    &--post {
+    &--post,
+    &--cancel {
       width: 260px;
     }
 
+    &--send-form,
+    &--modal {
+      width: 300px;
+    }
+
+    &--crop,
+    &--fill,
+    &--contrast {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .btn__icon {
+    fill: @pink;
+    color: @pink;
+    opacity: 1;
+
+    &--crop {
+      width: 22px;
+      height: 22px;
+    }
+
+    &--fill {
+      width: 25px;
+      height: 25px;
+    }
+
+    &--contrast {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .btn {
+    &--download {
+      font-size: 21px;
+    }
+
+    &--post,
     &--cancel {
-      width: 260px;
+      width: 184px;
+    }
+
+    &--close {
+      width: 460px;
+    }
+  }
+
+  .btn__icon {
+    &--crop {
+      width: 44px;
+      height: 44px;
+    }
+
+    &--fill {
+      width: 48px;
+      height: 48px;
+    }
+
+    &--contrast {
+      padding-left: 6px;
+      width: 32px;
+      height: 32px;
     }
   }
 }
