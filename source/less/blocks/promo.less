@@ -5,12 +5,10 @@
   &::after {
     content: "";
     position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 0 solid transparent;
-    border-top: 30px solid white;
-    border-right: 320px solid transparent;
-    border-bottom: 30px solid transparent;
+    top: 100%;
+    width: 100%;
+    height: 32px;
+    background: linear-gradient(to left top, transparent 50%, @white 50%) left / 100% 100% no-repeat;
   }
 }
 
@@ -28,7 +26,7 @@
 
 .promo__description {
   font-size: 24px;
-  line-height: 27px;
+  line-height: 28px;
   font-weight: 300;
   text-align: center;
 
@@ -41,10 +39,7 @@
 @media (min-width: @tablet-width) {
   .promo {
     &::after {
-      border-left: 0 solid transparent;
-      border-top: 55px solid white;
-      border-right: 660px solid transparent;
-      border-bottom: 55px solid transparent;
+      height: 50px;
     }
   }
 
@@ -72,10 +67,7 @@
 @media (min-width: @desktop-width) {
   .promo {
     &::after {
-      border-left: 0 solid transparent;
-      border-top: 92px solid white;
-      border-right: 1200px solid transparent;
-      border-bottom: 55px solid transparent;
+      height: 93px;
     }
   }
 

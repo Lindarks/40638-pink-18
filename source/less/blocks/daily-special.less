@@ -2,7 +2,7 @@
   position: relative;
   background-color: @white;
 
-  width: 320px;
+  width: 100%;
   overflow: hidden;
   margin: 0 auto;
 
@@ -78,6 +78,7 @@
   color: @pink;
 
   margin: 0;
+  margin-right: 141px; /* Заплатка для IE11 */
   padding-left: 49px;
   padding-top: 10px;
 }
@@ -105,8 +106,6 @@
 
 @media (min-width: @tablet-width) {
   .daily-special {
-    width: 660px;
-
     &::after {
       top: 57px;
     }
@@ -153,8 +152,6 @@
 
 @media (min-width: @desktop-width) {
   .daily-special {
-    width: 1200px;
-
     &::after {
       top: 54px;
       right: 129px;

@@ -25,7 +25,7 @@
 
   &--user-contacts {
     padding-top: 22px;
-    padding-bottom: 35px;
+    padding-bottom: 32px;
   }
 
   &--user-review {
@@ -34,6 +34,7 @@
   }
 
   &--btn {
+    display: flex;
     padding-top: 7px;
     padding-bottom: 7px;
   }
@@ -79,15 +80,14 @@
 .contest__form input[type="text"],
 .contest__form input[type="email"],
 .contest__form input[type="tel"] {
-  font-size: 18px;
+  font-size: 19px;
   line-height: 30px;
   color: @navy;
 
   box-sizing: border-box;
   width: 280px;
-  padding-bottom: 15px;
+  height: 65px;
   padding-left: 20px;
-  padding-top: 16px;
 
   background-color: transparent;
   border: 2px solid @gray;
@@ -104,12 +104,13 @@
 }
 
 .contest__form textarea {
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 30px;
   color: @navy;
 
   box-sizing: border-box;
-  width: 280px;
+  width: 100%;
   min-height: 200px;
   padding-top: 13px;
   padding-left: 18px;
@@ -144,6 +145,10 @@
   &:last-child {
     display: none;
   }
+}
+
+.contest__btn {
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
@@ -183,7 +188,7 @@
       order: 2;
       margin-top: -4px;
 
-      background-color: @light-gray;
+      background-color: @white;
     }
 
     &--user-contacts {
@@ -195,7 +200,7 @@
       order: 4;
       margin-top: 57px;
 
-      background-color: @light-gray;
+      background-color: @white;
     }
 
     &--user-review {
@@ -204,6 +209,7 @@
     }
 
     &--btn {
+      display: block;
       order: 6;
       margin-top: 66px;
       width: 50%;
@@ -221,13 +227,12 @@
   }
 
   .contest__form textarea {
-    width: 500px;
+    width: 100%;
     min-height: 191px;
     padding-top: 13px;
     padding-left: 18px;
     padding-right: 16px;
     margin-top: 38px;
-    margin-left: 59px;
     margin-bottom: 46px;
   }
 
@@ -266,7 +271,7 @@
 
     &--user-challenge {
       width: 100%;
-      margin-top: 59px;
+      margin-top: 57px;
 
       background-color: @white;
     }
@@ -285,13 +290,18 @@
     }
   }
 
+  .contest__form input[type="text"],
+  .contest__form input[type="email"],
+  .contest__form input[type="tel"] {
+    padding-left: 18px;
+  }
+
   .contest__form textarea {
     width: 820px;
     min-height: 128px;
     padding-top: 14px;
     padding-left: 19px;
     margin-top: 34px;
-    margin-left: 58px;
     margin-bottom: 36px;
   }
 

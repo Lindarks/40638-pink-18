@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <title>PINK</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="preload" href="fonts/opensansbold.woff" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
     <script src="js/picturefill.min.js"></script>
   </head>
   <body>
@@ -165,17 +166,20 @@
               </div>
             </div>
             <div class="review__toggles slider__toggles">
-              <button class="btn btn--slider-toggle slider__toggle" type="button"></button>
-              <button class="btn btn--slider-toggle slider__toggle" type="button"></button>
-              <button class="btn btn--slider-toggle slider__toggle" type="button"></button>
+              <div class="slider__toggles-wrapper">
+                <button class="btn slider__toggle slider__toggle--active" type="button" aria-label="Переключить слайд"></button>
+                <!--Класс .slider__toggle--active задает стили для буллета, на который нажал пользователь-->
+                <button class="btn slider__toggle" type="button"></button>
+                <button class="btn slider__toggle" type="button"></button>
+              </div>
             </div>
             <div class="review__controls slider__controls">
-              <button class="btn btn--slider-control slider__control slider__control--left" type="button">
+              <button class="btn btn--slider-control slider__control slider__control--left" type="button" aria-label="Переключить слайд">
                 <svg class="slider__control-icon slider__control-icon--left" width="22" height="41">
                   <use xlink:href="#icon-review-arrow-left"></use>
                 </svg>
               </button>
-              <button class="btn btn--slider-control slider__control slider__control--right" type="button">
+              <button class="btn btn--slider-control slider__control slider__control--right" type="button" aria-label="Переключить слайд">
                 <svg class="slider__control-icon slider__control-icon--right" width="22" height="41">
                   <use xlink:href="#icon-review-arrow-right"></use>
                 </svg>
@@ -268,9 +272,12 @@
               </div>
             </div>
             <div class="tarif__toggles slider__toggles">
-              <button class="btn btn--slider-toggle slider__toggle" type="button"></button>
-              <button class="btn btn--slider-toggle slider__toggle" type="button"></button>
-              <button class="btn btn--slider-toggle slider__toggle" type="button"></button>
+              <div class="slider__toggles-wrapper">
+                <button class="btn slider__toggle" type="button" aria-label="Переключить слайд"></button>
+                <button class="btn slider__toggle slider__toggle--active" type="button" aria-label="Переключить слайд"></button>
+                <!--Класс .slider__toggle--active задает стили для буллета, на который нажал пользователь-->
+                <button class="btn slider__toggle" type="button" aria-label="Переключить слайд"></button>
+              </div>
             </div>
           </div>
         </div>
@@ -353,7 +360,7 @@
         </div>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
     <script src="js/svgxuse.min.js"></script>
   </body>
 </html>

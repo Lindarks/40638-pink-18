@@ -36,41 +36,6 @@
     background-color: @white;
   }
 
-  &--slider-toggle {
-    position: relative;
-    width: 6px;
-    height: 6px;
-    padding: 0;
-
-    background-color: @gray;
-    border: none;
-    border-radius: 50%;
-    margin: 9px;
-  }
-
-  &--slider-toggle:hover,
-  &--slider-toggle:focus {
-    background-color: @dark-gray;
-  }
-
-  &--slider-toggle:active {
-    background-color: @light-gray;
-  }
-
-  &--slider-toggle:active::after {
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: -3px;
-
-    width: 6px;
-    height: 6px;
-
-    background-color: @dark-gray;
-    border: 3px solid @navy;
-    border-radius: 50%;
-  }
-
   &--slider-control {
     width: 30px;
     height: 70px;
@@ -246,26 +211,46 @@
 
     &--post,
     &--cancel {
+      font-size: 19px;
       width: 184px;
+      padding-top: 16px;
+      padding-bottom: 14px;
+      padding-left: 11px;
     }
 
     &--close {
       width: 460px;
     }
+
+    &--crop,
+    &--fill,
+    &--contrast {
+      position: relative;
+      width: 48px;
+      height: 48px;
+
+      margin-bottom: 21px;
+    }
   }
 
   .btn__icon {
+    position: absolute;
+    left: 0;
+
     &--crop {
+      top: -2px;
       width: 44px;
       height: 44px;
     }
 
     &--fill {
+      top: 2px;
       width: 48px;
       height: 48px;
     }
 
     &--contrast {
+      top: 8px;
       padding-left: 6px;
       width: 32px;
       height: 32px;
