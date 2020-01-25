@@ -4,6 +4,9 @@
 
 .social-copyright__container {
   .container();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &--photo {
     padding-top: 40px;
@@ -16,14 +19,9 @@
   }
 }
 
-.social-copyright__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.social-copyright__logo {
-  &--mobile {
+.social-copyright__logo-image {
+  &--mobile-tablet  {
+    display: block;
     color: @navy;
 
     &:hover,
@@ -43,67 +41,79 @@
 }
 
 .social-copyright__social {
-  margin-top: 26px;
+  padding-top: 32px;
 }
 
 .social-copyright__copyright {
-  margin-top: 24px;
+  padding-top: 34px;
 }
 
 @media (min-width: @tablet-width) {
   .social-copyright__container {
+    flex-direction: row;
+    justify-content: space-between;
+
     &--index {
-      padding-top: 22px;
-      padding-bottom: 35px;
+      padding-top: 17px;
+      padding-bottom: 31px;
     }
 
     &--photo {
-      padding-top: 22px;
+      padding-top: 15px;
       padding-bottom: 30px;
     }
 
     &--form {
-      padding-top: 71px;
-      padding-bottom: 33px;
+      padding-top: 66px;
+      padding-bottom: 31px;
     }
   }
 
-  .social-copyright__wrapper {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
   .social-copyright__social {
-    margin-top: 11px;
-    margin-right: 18px;
+    padding-top: 16px;
+    padding-right: 18px;
   }
 
   .social-copyright__copyright {
-    margin-top: 2px;
+    padding-top: 28px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .social-copyright__container {
     &--index {
-      padding-top: 57px;
+      padding-top: 49px;
       padding-bottom: 66px;
     }
 
     &--photo {
-      padding-top: 83px;
+      padding-top: 74px;
       padding-bottom: 65px;
     }
 
     &--form {
-      padding-top: 54px;
+      padding-top: 46px;
       padding-bottom: 72px;
     }
   }
 
+  .social-copyright__logo-image {
+    &--mobile-tablet  {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
+  }
+
   .social-copyright__social {
-    margin-top: 11px;
-    margin-right: 0;
-    margin-left: 7px; /*Возможно, для формы отступ 15px*/
+    padding-top: 21px;
+    padding-left: 12px;
+    padding-right: 0;
+  }
+
+  .social-copyright__copyright {
+    padding-top: 33px;
   }
 }

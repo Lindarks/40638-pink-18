@@ -67,7 +67,6 @@
 }
 
 .contacts__option-text {
-  position: relative;
   font-size: 24px;
   line-height: 30px;
   font-weight: 300;
@@ -75,6 +74,10 @@
   color: @pink;
 
   margin: 0;
+
+  &--email {
+    position: relative;
+  }
 
   &--email:hover,
   &--email:focus {
@@ -110,6 +113,9 @@
 @media (min-width: @tablet-width) {
   .contacts__container {
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .contacts__group {
@@ -117,42 +123,53 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    width: 605px; /* Заплатка для IE11 */
 
     padding-top: 0;
     padding-bottom: 28px;
   }
 
   .contacts__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 50%;
     padding-top: 45px;
 
     &--phone b {
-      padding-left: 107px;
+      padding-left: 0;
+      padding-right: 20px;
     }
 
     &--phone p {
-      padding-left: 47px;
-      padding-top: 1px;
+      padding-left: 0;
+      padding-top: 4px;
+      padding-right: 20px;
     }
 
     &--email b {
-      padding-left: 119px;
+      padding-left: 17px;
     }
 
     &--email p {
-      padding-left: 40px;
-      padding-top: 3px;
+      padding-left: 17px;
+      padding-top: 4px;
+    }
+
+    &--address {
+      flex-grow: 1;
     }
 
     &--address b {
-      padding-left: 57px;
+      padding-left: 0;
+      padding-top: 0x;
     }
 
     &--address address {
       width: 212px;
       text-align: center;
-      padding-left: 50px;
-      padding-top: 2px;
+      padding-left: 0;
+      padding-top: 5px;
     }
   }
 
@@ -171,12 +188,18 @@
 
     &--email:hover::after,
     &--email:focus::after {
-      left: 42px;
+      left: 18px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .contacts__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
   .contacts__title {
     font-size: 50px;
     line-height: 60px;
@@ -203,12 +226,7 @@
       order: 1;
     }
 
-    &--phone b {
-      padding-left: 103px;
-    }
-
     &--phone p {
-      padding-left: 43px;
       padding-top: 21px;
     }
 
@@ -219,7 +237,6 @@
 
     &--address address {
       width: 212px;
-      padding-left: 48px;
       padding-top: 21px;
     }
 
@@ -227,12 +244,7 @@
       order: 3;
     }
 
-    &--email b {
-      padding-left: 124px;
-    }
-
     &--email p {
-      padding-left: 45px;
       padding-top: 23px;
     }
   }

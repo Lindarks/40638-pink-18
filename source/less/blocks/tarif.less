@@ -16,7 +16,7 @@
 .tarif__list {
   display: table;
   position: relative;
-  width: 828px;
+  width: 260%;
   background-color: @white;
   border-collapse: collapse;
 
@@ -51,6 +51,22 @@
   border: 2px solid @gray;
   background-color: @navy;
 
+  &--hit {
+    position: relative;
+  }
+
+  &--hit::after {
+    content: "Хит";
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    transform: rotate(-45deg);
+    color: @white;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+  }
+
   &:first-child {
     border-left-color: @light-gray;
     border-right-color: @navy;
@@ -65,18 +81,6 @@
     border-top-color: @navy;
   }
 
-  &:nth-child(3)::after {
-    content: "Хит";
-    font-size: 14px;
-    font-weight: 300;
-    text-transform: uppercase;
-    transform: rotate(-45deg);
-    color: @white;
-    position: absolute;
-    top: 15px;
-    left: 286px;
-  }
-
   &:nth-child(2) {
     border-left-color: @navy;
   }
@@ -88,11 +92,18 @@
 
 .tarif__hit-icon {
   position: absolute;
-  top: 0;
-  left: 273px;
 
-  width: 74px;
-  height: 73px;
+  &--mobile-desktop {
+    top: -2px;
+    left: 0;
+
+    width: 74px;
+    height: 73px;
+  }
+
+  &--tablet {
+    display: none;
+  }
 }
 
 .tarif__name span {
@@ -163,7 +174,7 @@
   }
 
   .tarif__list {
-    width: 620px;
+    width: 100%;
     margin: 0 auto;
 
     &--second-slide,
@@ -178,18 +189,27 @@
     padding-top: 13px;
     padding-bottom: 8px;
 
-    &:nth-child(3)::after {
-      top: 10px;
-      left: 319px;
+    &--hit::after {
+      top: 7px;
+      left: 7px;
     }
   }
 
   .tarif__hit-icon {
-    top: -2px;
-    left: 311px;
+    position: absolute;
 
-    width: 61px;
-    height: 61px;
+    &--mobile-desktop {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+
+      top: -2px;
+
+      width: 61px;
+      height: 61px;
+    }
   }
 
   .tarif__name span {
@@ -220,12 +240,12 @@
 
   .tarif__option__yes-icon {
     top: 13px;
-    right: 61px;
+    right: 40%;
   }
 
   .tarif__option__no-icon {
     top: 9px;
-    right: 63px;
+    right: 41%;
   }
 
   .tarif__toggles {
@@ -252,27 +272,32 @@
     padding-bottom: 95px;
   }
 
-  .tarif__list {
-    width: 938px;
-  }
-
   .tarif__name {
     font-size: 18px;
-    padding-top: 17px;
+    padding-top: 16px;
     padding-bottom: 18px;
 
-    &:nth-child(3)::after {
-      top: 15px;
-      left: 483px;
+    &--hit::after {
+      top: 12px;
+      left: 12px;
     }
   }
 
   .tarif__hit-icon {
-    top: -1px;
-    left: 471px;
+    position: absolute;
 
-    width: 74px;
-    height: 73px;
+    &--mobile-desktop {
+      display: block;
+      top: -2px;
+      left: 0;
+
+      width: 74px;
+      height: 73px;
+    }
+
+    &--tablet {
+      display: none;
+    }
   }
 
   .tarif__name span {
@@ -289,12 +314,12 @@
   }
 
   .tarif__option__yes-icon {
-    top: 23px;
-    right: 100px;
+    top: 21px;
+    right: 43.8%;
   }
 
   .tarif__option__no-icon {
-    top: 17px;
-    right: 104px;
+    top: 16px;
+    right: 44.5%;
   }
 }

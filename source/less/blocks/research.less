@@ -11,24 +11,27 @@
   }
 
   .research__container {
+    position: relative;
     .container();
     padding-top: 48px;
     padding-bottom: 40px;
   }
 
   .research__wrapper {
-    display: flex;
-    justify-content: space-between;
-
     padding-top: 10px;
     padding-bottom: 60px;
   }
 
+  .research__wrapper-inner {
+    position: absolute;
+    width: 241px;
+    height: 278px;
+    top: 59px;
+    right: 61.2%;
+  }
+
   .research__picture {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     &::before {
       content: "24";
@@ -43,33 +46,29 @@
     }
   }
 
-  .research__picture-part-1 {
+  .research__picture-timer {
     position: absolute;
     left: -18px;
     top: 0;
-  }
 
-  .research__picture-part-2 {
-    position: absolute;
-    left: 19px;
-    top: 56px;
-    color: @pink;
-  }
-
-  .research__picture-part-1 svg {
     fill: @middle-gray;
     width: 277px;
     height: 277px;
   }
 
-  .research__picture-part-2 svg {
+  .research__picture-editor-diagram-fill {
+    position: absolute;
+    left: 19px;
+    top: 56px;
+    color: @pink;
+
     width: 202px;
     height: 202px;
   }
 
   .research__info {
-    width: 50%;
     padding-top: 37px;
+    padding-left: 50%;
   }
 
   .research__title {
@@ -114,13 +113,20 @@
   }
 
   .research__container {
-    .container();
     padding-bottom: 86px;
   }
 
   .research__wrapper {
     padding-top: 91px;
     padding-bottom: 30px;
+  }
+
+  .research__wrapper-inner {
+    position: absolute;
+    width: 241px;
+    height: 278px;
+    top: 139px;
+    right: 74.4%;
   }
 
   .research__picture {
@@ -132,22 +138,18 @@
     }
   }
 
-  .research__picture-part-1 {
+  .research__picture-timer {
     left: -25px;
     top: -91px;
-  }
 
-  .research__picture-part-2 {
-    left: 23px;
-    top: -21px;
-  }
-
-  .research__picture-part-1 svg {
     width: 350px;
     height: 345px;
   }
 
-  .research__picture-part-2 svg {
+  .research__picture-editor-diagram-fill {
+    left: 23px;
+    top: -21px;
+
     width: 253px;
     height: 253px;
   }
@@ -155,6 +157,7 @@
   .research__info {
     width: 573px;
     padding-top: 0;
+    padding-left: 39%;
   }
 
   .research__title {

@@ -3,6 +3,8 @@ var navToggle = document.querySelector(".main-nav__toggle");
 
 //Показываем кнопку меню, если есть JS
 navMain.classList.remove("main-nav--nojs");
+navMain.classList.remove("main-nav--open");
+navMain.classList.add("main-nav--closed");
 
 //Закрываем и открываем меню нажатием на бургер/крестик
 navToggle.addEventListener("click", function() {
@@ -14,6 +16,12 @@ navToggle.addEventListener("click", function() {
     navMain.classList.remove("main-nav--open");
   }
 });
+
+if (document.querySelector(".map__iframe")) {
+  var mapIframe = document.querySelector(".map__iframe");
+
+  mapIframe.classList.remove("map__iframe--nojs");
+}
 
 //Работа с формой
 if (document.querySelector(".contest__form")) {

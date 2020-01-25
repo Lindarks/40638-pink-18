@@ -2,60 +2,60 @@
   &--open {
     position: relative;
     margin-bottom: -68px;
-  }
 
-  &--open .main-nav__top-block { /* Верхний НЕпрозрачный блок с логотипом при открытом меню на мобильной ширине*/
-    padding-top: 22px;
-    padding-bottom: 25px;
+    .main-nav__top-block { /* Верхний НЕпрозрачный блок с логотипом при открытом меню на мобильной ширине*/
+      padding-top: 22px;
+      padding-bottom: 25px;
 
-    background-color: @navy;
-    border-bottom: 1px solid @black;
-  }
+      background-color: @navy;
+      border-bottom: 1px solid @black;
+    }
 
-  &--open .main-nav__toggle {
-    position: absolute;
-    top: -2px;
-    right: 19px;
-
-    width: 24px;
-    height: 24px;
-
-    border: none;
-    background-color: transparent;
-
-    cursor: pointer;
-
-    &::before,
-    &::after {
-      content: "";
+    .main-nav__toggle {
       position: absolute;
-      left: 10px;
-      top: -3px;
+      top: -2px;
+      right: 19px;
 
-      width: 4px;
-      height: 30px;
+      width: 24px;
+      height: 24px;
 
-      background-color: @white;
-    }
+      border: none;
+      background-color: transparent;
 
-    &::before {
-      transform: rotate(45deg);
-    }
+      cursor: pointer;
 
-    &::after {
-      transform: rotate(-45deg);
-    }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: -3px;
 
-    &:hover::before,
-    &:hover::after,
-    &:focus::before,
-    &:focus::after {
-      background-color: @pink;
-    }
+        width: 4px;
+        height: 30px;
 
-    &:active::before,
-    &:active::after {
-      background-color: @transparent-pink;
+        background-color: @white;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+
+      &:hover::before,
+      &:hover::after,
+      &:focus::before,
+      &:focus::after {
+        background-color: @pink;
+      }
+
+      &:active::before,
+      &:active::after {
+        background-color: @transparent-pink;
+      }
     }
   }
 
@@ -63,61 +63,65 @@
     position: absolute;
     left: 0;
     right: 0;
-  }
 
-  &--closed .main-nav__top-block { /* Верхний ПРОЗРАЧНЫЙ блок с логотипом при открытом меню на мобильной ширине*/
-    padding-top: 22px;
-    padding-bottom: 21px;
+    .main-nav__top-block { /* Верхний ПРОЗРАЧНЫЙ блок с логотипом при открытом меню на мобильной ширине*/
+      padding-top: 22px;
+      padding-bottom: 21px;
 
-    background-color: rgba(0, 0, 0, 0.3);
-    border: none;
-  }
+      background-color: rgba(0, 0, 0, 0.3);
+      border: none;
+    }
 
-  &--closed .main-nav__toggle {
-    position: absolute;
-    top: 0;
-    right: 20px;
+    .main-nav__list {
+      display: none;
+    }
 
-    width: 50px;
-    height: 24px;
-
-    background-color: transparent;
-    border: none;
-
-    cursor: pointer;
-
-    &::before {
-      content: "";
+    .main-nav__toggle {
       position: absolute;
-      left: 0;
       top: 0;
+      right: 20px;
 
       width: 50px;
-      height: 4px;
+      height: 24px;
 
-      background-color: @white;
-      box-shadow: 0 10px 0 0 @white, 0 20px 0 0 @white;
+      background-color: transparent;
+      border: none;
+
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        width: 50px;
+        height: 4px;
+
+        background-color: @white;
+        box-shadow: 0 10px 0 0 @white, 0 20px 0 0 @white;
+      }
+
+      &:hover::before,
+      &:focus::before {
+        background-color: @pink;
+        box-shadow: 0 10px 0 0 @pink, 0 20px 0 0 @pink;
+      }
+
+      &:active::before {
+        background-color: @transparent-pink;
+        box-shadow: 0 10px 0 0 @transparent-pink, 0 20px 0 0 @transparent-pink;
+      }
     }
-
-    &:hover::before,
-    &:focus::before {
-      background-color: @pink;
-      box-shadow: 0 10px 0 0 @pink, 0 20px 0 0 @pink;
-    }
-
-    &:active::before {
-      background-color: @transparent-pink;
-      box-shadow: 0 10px 0 0 @transparent-pink, 0 20px 0 0 @transparent-pink;
-    }
-  }
-
-  &--closed .main-nav__list {
-    display: none;
   }
 
   &--nojs .main-nav__toggle {
     display: none;
   }
+}
+
+.main-nav__top-block {
+  width: 100%;
 }
 
 .main-nav__top-block-container {
@@ -129,13 +133,7 @@
   margin: 0 auto;
 }
 
-.main-nav__logo {
-  width: 75px;
-  height: 22px;
-
-  color: @white;
-  cursor: pointer;
-
+.main-nav__logo-image {
   &--mobile {
     display: block;
   }
@@ -149,37 +147,51 @@
   }
 }
 
+.main-nav__logo {
+  width: 75px;
+  height: 22px;
+
+  color: @white;
+  cursor: pointer;
+}
+
 @media (min-width: @tablet-width) { /* Эти стили работают на планшетной ширине */
   .main-nav {
     &--open {
       margin-bottom: -110px;
-    }
 
-    &--open .main-nav__top-block { /* Верхний НЕпрозрачный блок с логотипом при открытом меню на мобильной ширине*/
-      padding-top: 27px;
-      padding-bottom: 42px;
+      .main-nav__top-block { /* Верхний НЕпрозрачный блок с логотипом при открытом меню на мобильной ширине*/
+        padding-top: 27px;
+        padding-bottom: 42px;
 
-      background-color: @navy;
-      border-bottom: 1px solid @black;
-    }
+        background-color: @navy;
+        border-bottom: 1px solid @black;
+      }
 
-    &--open .main-nav__toggle {
-      top: 16px;
-      right: 19px;
+      .main-nav__toggle {
+        top: 16px;
+        right: 19px;
 
-      &::before,
-      &::after {
-        left: 10px;
-        top: -3px;
+        &::before,
+        &::after {
+          left: 10px;
+          top: -3px;
+        }
       }
     }
 
-    &--closed .main-nav__top-block { /* Верхний ПРОЗРАЧНЫЙ блок с логотипом при открытом меню на мобильной ширине*/
-      padding-top: 27px;
-      padding-bottom: 43px;
+    &--closed {
+      .main-nav__top-block { /* Верхний ПРОЗРАЧНЫЙ блок с логотипом при открытом меню на мобильной ширине*/
+        padding-top: 27px;
+        padding-bottom: 43px;
 
-      background-color: rgba(0, 0, 0, 0.3);
-      border: none;
+        background-color: rgba(0, 0, 0, 0.3);
+        border: none;
+      }
+
+      .main-nav__toggle {
+        top: 17px;
+      }
     }
   }
 
@@ -187,25 +199,31 @@
     width: 100%;
   }
 
-  .main-nav__logo {
-    width: 147px;
-    height: 40px;
-
+  .main-nav__logo-image {
     &--mobile {
       display: none;
     }
 
     &--tablet {
       display: block;
+    }
 
-      &:hover,
-      &:focus {
-        color: @pink;
-      }
+    &--desktop {
+      display: none;
+    }
+  }
 
-      &:active {
-        color: @transparent-white;
-      }
+  .main-nav__logo {
+    width: 147px;
+    height: 40px;
+
+    &:hover,
+    &:focus {
+      color: @pink;
+    }
+
+    &:active {
+      color: @transparent-white;
     }
   }
 }
@@ -214,6 +232,11 @@
   .main-nav {
     background-color: rgba(0, 0, 0, 0.3);
 
+    &--open {
+      margin-bottom: -207px;
+    }
+
+    &--closed .main-nav__top-block,
     &--open .main-nav__top-block {
       background-color: transparent;
       border: none;
@@ -221,22 +244,31 @@
 
     &--closed .main-nav__list {
       display: flex;
+      margin-left: auto;
     }
   }
 
   .main-nav__wrapper {
-    width: 94%; /*Тут должен был быть миксин .container, но он некорректно работает для этого элемента в IE11, пришлось писать вот так*/
+    width: 97%; /*Тут должен был быть миксин .container, но он некорректно работает для этого элемента в IE11, пришлось писать вот так*/
     margin: 0 auto;
     max-width: 940px;
     display: flex;
     flex-direction: row;
   }
 
+  .main-nav__top-block {
+    width: 150px;
+  }
+
   .main-nav__top-block-container {
     padding: 0;
   }
 
-  .main-nav__logo {
+  .main-nav__logo-image {
+    &--mobile {
+      display: none;
+    }
+
     &--tablet {
       display: none;
     }
