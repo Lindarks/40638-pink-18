@@ -153,6 +153,16 @@
 
   color: @white;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: @pink;
+  }
+
+  &:active {
+    color: @white;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) { /* Эти стили работают на планшетной ширине */
@@ -216,15 +226,6 @@
   .main-nav__logo {
     width: 147px;
     height: 40px;
-
-    &:hover,
-    &:focus {
-      color: @pink;
-    }
-
-    &:active {
-      color: @transparent-white;
-    }
   }
 }
 

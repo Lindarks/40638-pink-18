@@ -17,27 +17,6 @@
     cursor: pointer;
   }
 
-  &--picture::after {
-    content: "Панорама дня";
-    font-size: 12px;
-    line-height: 24px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: @white;
-
-    position: absolute;
-    top: 0;
-    left: 50%;
-
-    width: 122px;
-    height: 30px;
-
-    padding-left: 19px;
-    padding-top: 6px;
-
-    background-color: @pink;
-  }
-
   &--text {
     position: relative;
     width: 280px;
@@ -48,6 +27,27 @@
     padding-bottom: 18px;
     color: @navy;
     background-color: @light-gray;
+  }
+
+  &--text::after {
+    content: "Панорама дня";
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: @white;
+
+    position: absolute;
+    top: -137px;
+    left: 50%;
+
+    width: 122px;
+    height: 30px;
+
+    padding-left: 19px;
+    padding-top: 6px;
+
+    background-color: @pink;
   }
 }
 
@@ -95,8 +95,8 @@
 
 .daily-special__reaction-btn {
   position: absolute;
-  left: 38px;
-  bottom: 24px;
+  left: 19px;
+  bottom: 25px;
   width: 13px;
   height: 12px;
   border: none;
@@ -105,8 +105,8 @@
 
 .daily-special__reaction-icon {
   position: absolute;
-  top: -1px;
-  left: -20px;
+  top: 0;
+  left: 0;
 
   width: 13px;
   height: 12px;
@@ -123,20 +123,21 @@
   }
 
   .daily-special__inner-wrapper {
-    &--picture::after {
-      top: 58px;
-      left: 75.7%;
-    }
-
     &--text {
       width: 620px;
       padding-top: 23px;
       padding-bottom: 24px;
     }
+
+    &--text::after {
+      top: -452px;
+      left: 77.3%;
+    }
   }
 
   .daily-special__author {
     margin: 0;
+    margin-right: auto;
     padding-left: 28px;
     padding-top: 0;
     order: 1;
@@ -150,8 +151,8 @@
   }
 
   .daily-special__reaction-btn {
-    left: 598px;
-    bottom: 79px;
+    left: 578px;
+    bottom: 78px;
   }
 
   .daily-special__description {
@@ -173,13 +174,13 @@
   }
 
   .daily-special__inner-wrapper {
-    &--picture::after {
-      top: 53px;
-      left: 77.5%;
-    }
-
     &--text {
       width: 940px;
+    }
+
+    &--text::after {
+      top: -453px;
+      left: 85.1%;
     }
   }
 
@@ -197,12 +198,5 @@
   .daily-special__reaction-btn {
     left: 896px;
     bottom: 55px;
-  }
-
-
-  .daily-special__reaction-icon {
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 }
